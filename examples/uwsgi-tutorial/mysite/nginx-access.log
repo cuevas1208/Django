@@ -1,0 +1,4 @@
+69.245.172.244 - - [20/Dec/2017:07:24:21 +0000] "GET / HTTP/1.1" 502 584 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+69.245.172.244 - - [20/Dec/2017:07:24:22 +0000] "GET /favicon.ico HTTP/1.1" 502 584 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+69.245.172.244 - - [20/Dec/2017:07:24:24 +0000] "GET / HTTP/1.1" 502 584 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+69.245.172.244 - - [20/Dec/2017:07:24:24 +0000] "GET /favicon.ico HTTP/1.1" 502 584 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"

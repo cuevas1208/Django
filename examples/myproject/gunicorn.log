@@ -1,0 +1,3509 @@
+[2017-12-06 05:45:44 +0000] [14668] [DEBUG] Current configuration:
+  group: 1000
+  spew: False
+  syslog_prefix: None
+  max_requests_jitter: 0
+  config: None
+  pre_request: <function PreRequest.pre_request at 0x7f6b67c7b620>
+  ssl_version: 2
+  on_starting: <function OnStarting.on_starting at 0x7f6b67c76730>
+  suppress_ragged_eofs: True
+  limit_request_fields: 100
+  syslog_addr: udp://localhost:514
+  initgroups: False
+  child_exit: <function ChildExit.child_exit at 0x7f6b67c7b8c8>
+  loglevel: debug
+  syslog: False
+  ca_certs: None
+  preload_app: False
+  raw_env: []
+  pidfile: None
+  tmp_upload_dir: None
+  pythonpath: None
+  proxy_protocol: False
+  statsd_prefix: 
+  reload_engine: auto
+  check_config: False
+  limit_request_field_size: 8190
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f6b67c7bbf8>
+  threads: 1
+  max_requests: 0
+  chdir: /home/ubuntu/rockford/examples/myproject
+  worker_tmp_dir: None
+  user: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  worker_connections: 1000
+  default_proc_name: .wsgi:application
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  reload: False
+  keyfile: None
+  when_ready: <function WhenReady.when_ready at 0x7f6b67c76a60>
+  worker_int: <function WorkerInt.worker_int at 0x7f6b67c7b158>
+  worker_class: sync
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  proc_name: None
+  certfile: None
+  workers: 3
+  limit_request_line: 4094
+  bind: ['127.0.0.1:8000']
+  on_reload: <function OnReload.on_reload at 0x7f6b67c768c8>
+  pre_fork: <function Prefork.pre_fork at 0x7f6b67c76bf8>
+  post_fork: <function Postfork.post_fork at 0x7f6b67c76d90>
+  sendfile: None
+  graceful_timeout: 30
+  backlog: 2048
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f6b67c7b2f0>
+  post_request: <function PostRequest.post_request at 0x7f6b67c7b730>
+  on_exit: <function OnExit.on_exit at 0x7f6b67c7bd90>
+  forwarded_allow_ips: ['127.0.0.1']
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f6b67c76f28>
+  keepalive: 2
+  accesslog: None
+  timeout: 30
+  do_handshake_on_connect: False
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  pre_exec: <function PreExec.pre_exec at 0x7f6b67c7b488>
+  daemon: False
+  cert_reqs: 0
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  statsd_host: None
+  ciphers: TLSv1
+  worker_exit: <function WorkerExit.worker_exit at 0x7f6b67c7ba60>
+  paste: None
+  raw_paste_global_conf: []
+[2017-12-06 05:45:44 +0000] [14668] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 05:45:44 +0000] [14668] [DEBUG] Arbiter booted
+[2017-12-06 05:45:44 +0000] [14668] [INFO] Listening at: http://127.0.0.1:8000 (14668)
+[2017-12-06 05:45:44 +0000] [14668] [INFO] Using worker: sync
+[2017-12-06 05:45:44 +0000] [14671] [INFO] Booting worker with pid: 14671
+[2017-12-06 05:45:44 +0000] [14671] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named '.wsgi'
+[2017-12-06 05:45:44 +0000] [14671] [INFO] Worker exiting (pid: 14671)
+[2017-12-06 05:45:44 +0000] [14672] [INFO] Booting worker with pid: 14672
+[2017-12-06 05:45:44 +0000] [14672] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named '.wsgi'
+[2017-12-06 05:45:44 +0000] [14672] [INFO] Worker exiting (pid: 14672)
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 202, in run
+    self.manage_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 544, in manage_workers
+    self.spawn_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 612, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+    self.reap_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/bin/gunicorn", line 11, in <module>
+    sys.exit(run())
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 203, in run
+    super(Application, self).run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 231, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 344, in halt
+    self.stop()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+    self.reap_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2017-12-06 05:48:06 +0000] [14716] [DEBUG] Current configuration:
+  workers: 3
+  when_ready: <function WhenReady.when_ready at 0x7f8be6803a60>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f8be68082f0>
+  raw_paste_global_conf: []
+  check_config: False
+  keyfile: None
+  graceful_timeout: 30
+  post_fork: <function Postfork.post_fork at 0x7f8be6803d90>
+  on_exit: <function OnExit.on_exit at 0x7f8be6808d90>
+  worker_connections: 1000
+  max_requests: 0
+  keepalive: 2
+  sendfile: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  raw_env: []
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  forwarded_allow_ips: ['127.0.0.1']
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  proxy_allow_ips: ['127.0.0.1']
+  do_handshake_on_connect: False
+  reload_engine: auto
+  config: None
+  worker_int: <function WorkerInt.worker_int at 0x7f8be6808158>
+  logger_class: gunicorn.glogging.Logger
+  enable_stdio_inheritance: False
+  statsd_prefix: 
+  pre_request: <function PreRequest.pre_request at 0x7f8be6808620>
+  threads: 1
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f8be6803f28>
+  certfile: None
+  default_proc_name: .wsgi:application
+  proxy_protocol: False
+  on_reload: <function OnReload.on_reload at 0x7f8be68038c8>
+  child_exit: <function ChildExit.child_exit at 0x7f8be68088c8>
+  spew: False
+  syslog_prefix: None
+  umask: 0
+  pythonpath: None
+  max_requests_jitter: 0
+  proc_name: None
+  syslog_facility: user
+  on_starting: <function OnStarting.on_starting at 0x7f8be6803730>
+  pre_exec: <function PreExec.pre_exec at 0x7f8be6808488>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f8be6808bf8>
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  preload_app: False
+  pidfile: None
+  reload: False
+  accesslog: None
+  timeout: 30
+  bind: ['127.0.0.1:8000']
+  daemon: False
+  cert_reqs: 0
+  loglevel: debug
+  limit_request_field_size: 8190
+  backlog: 2048
+  capture_output: False
+  pre_fork: <function Prefork.pre_fork at 0x7f8be6803bf8>
+  post_request: <function PostRequest.post_request at 0x7f8be6808730>
+  syslog_addr: udp://localhost:514
+  statsd_host: None
+  limit_request_line: 4094
+  syslog: False
+  ca_certs: None
+  logconfig: None
+  initgroups: False
+  ciphers: TLSv1
+  worker_class: sync
+  tmp_upload_dir: None
+  paste: None
+  worker_exit: <function WorkerExit.worker_exit at 0x7f8be6808a60>
+  limit_request_fields: 100
+[2017-12-06 05:48:06 +0000] [14716] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 05:48:06 +0000] [14716] [DEBUG] Arbiter booted
+[2017-12-06 05:48:06 +0000] [14716] [INFO] Listening at: http://127.0.0.1:8000 (14716)
+[2017-12-06 05:48:06 +0000] [14716] [INFO] Using worker: sync
+[2017-12-06 05:48:06 +0000] [14719] [INFO] Booting worker with pid: 14719
+[2017-12-06 05:48:06 +0000] [14719] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named '.wsgi'
+[2017-12-06 05:48:06 +0000] [14719] [INFO] Worker exiting (pid: 14719)
+[2017-12-06 05:48:06 +0000] [14716] [INFO] Shutting down: Master
+[2017-12-06 05:48:06 +0000] [14716] [INFO] Reason: Worker failed to boot.
+[2017-12-06 05:55:28 +0000] [14888] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  pythonpath: None
+  accesslog: None
+  post_fork: <function Postfork.post_fork at 0x7f43b7ef8d90>
+  preload_app: False
+  paste: None
+  limit_request_field_size: 8190
+  pidfile: None
+  statsd_prefix: 
+  group: 1000
+  umask: 0
+  proxy_allow_ips: ['127.0.0.1']
+  default_proc_name: testapp.wsgi:application
+  config: None
+  do_handshake_on_connect: False
+  child_exit: <function ChildExit.child_exit at 0x7f43b7efd8c8>
+  sendfile: None
+  certfile: None
+  raw_env: []
+  tmp_upload_dir: None
+  loglevel: debug
+  statsd_host: None
+  forwarded_allow_ips: ['127.0.0.1']
+  bind: ['0.0.0.0:8000']
+  reload: False
+  limit_request_line: 4094
+  backlog: 2048
+  worker_connections: 1000
+  reload_engine: auto
+  check_config: False
+  raw_paste_global_conf: []
+  syslog: False
+  pre_fork: <function Prefork.pre_fork at 0x7f43b7ef8bf8>
+  syslog_prefix: None
+  on_reload: <function OnReload.on_reload at 0x7f43b7ef88c8>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f43b7ef8f28>
+  pre_request: <function PreRequest.pre_request at 0x7f43b7efd620>
+  worker_tmp_dir: None
+  proxy_protocol: False
+  logger_class: gunicorn.glogging.Logger
+  workers: 3
+  threads: 1
+  max_requests: 0
+  cert_reqs: 0
+  pre_exec: <function PreExec.pre_exec at 0x7f43b7efd488>
+  timeout: 30
+  on_exit: <function OnExit.on_exit at 0x7f43b7efdd90>
+  spew: False
+  user: 1000
+  keyfile: None
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  initgroups: False
+  when_ready: <function WhenReady.when_ready at 0x7f43b7ef8a60>
+  worker_class: sync
+  graceful_timeout: 30
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  capture_output: False
+  logconfig: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  proc_name: None
+  worker_int: <function WorkerInt.worker_int at 0x7f43b7efd158>
+  limit_request_fields: 100
+  chdir: /home/ubuntu/rockford/examples/myproject
+  on_starting: <function OnStarting.on_starting at 0x7f43b7ef8730>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f43b7efd2f0>
+  ca_certs: None
+  ciphers: TLSv1
+  keepalive: 2
+  syslog_addr: udp://localhost:514
+  post_request: <function PostRequest.post_request at 0x7f43b7efd730>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f43b7efda60>
+  daemon: False
+  max_requests_jitter: 0
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f43b7efdbf8>
+[2017-12-06 05:55:28 +0000] [14888] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 05:55:28 +0000] [14888] [DEBUG] Arbiter booted
+[2017-12-06 05:55:28 +0000] [14888] [INFO] Listening at: http://0.0.0.0:8000 (14888)
+[2017-12-06 05:55:28 +0000] [14888] [INFO] Using worker: sync
+[2017-12-06 05:55:28 +0000] [14891] [INFO] Booting worker with pid: 14891
+[2017-12-06 05:55:28 +0000] [14891] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 05:55:28 +0000] [14891] [INFO] Worker exiting (pid: 14891)
+[2017-12-06 05:55:28 +0000] [14892] [INFO] Booting worker with pid: 14892
+[2017-12-06 05:55:28 +0000] [14892] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 05:55:28 +0000] [14892] [INFO] Worker exiting (pid: 14892)
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 202, in run
+    self.manage_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 544, in manage_workers
+    self.spawn_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 612, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+    self.reap_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/bin/gunicorn", line 11, in <module>
+    sys.exit(run())
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 203, in run
+    super(Application, self).run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 231, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 344, in halt
+    self.stop()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+    self.reap_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2017-12-06 05:56:37 +0000] [14922] [DEBUG] Current configuration:
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on'}
+  pythonpath: None
+  bind: ['0.0.0.0:8000']
+  proxy_allow_ips: ['127.0.0.1']
+  workers: 3
+  worker_connections: 1000
+  worker_int: <function WorkerInt.worker_int at 0x7f791236b158>
+  backlog: 2048
+  pre_exec: <function PreExec.pre_exec at 0x7f791236b488>
+  reload_engine: auto
+  graceful_timeout: 30
+  ciphers: TLSv1
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  limit_request_line: 4094
+  logconfig: None
+  syslog_facility: user
+  worker_tmp_dir: None
+  initgroups: False
+  worker_class: sync
+  post_fork: <function Postfork.post_fork at 0x7f7912366d90>
+  ca_certs: None
+  sendfile: None
+  timeout: 30
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f7912366f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f791236bbf8>
+  umask: 0
+  tmp_upload_dir: None
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  user: 1000
+  pre_request: <function PreRequest.pre_request at 0x7f791236b620>
+  post_request: <function PostRequest.post_request at 0x7f791236b730>
+  child_exit: <function ChildExit.child_exit at 0x7f791236b8c8>
+  reload: False
+  proc_name: None
+  threads: 1
+  cert_reqs: 0
+  logger_class: gunicorn.glogging.Logger
+  statsd_host: None
+  forwarded_allow_ips: ['127.0.0.1']
+  statsd_prefix: 
+  keyfile: None
+  ssl_version: 2
+  max_requests_jitter: 0
+  spew: False
+  daemon: False
+  raw_paste_global_conf: []
+  on_starting: <function OnStarting.on_starting at 0x7f7912366730>
+  on_reload: <function OnReload.on_reload at 0x7f79123668c8>
+  default_proc_name: .wsgi:application
+  keepalive: 2
+  preload_app: False
+  proxy_protocol: False
+  accesslog: None
+  pidfile: None
+  suppress_ragged_eofs: True
+  loglevel: debug
+  capture_output: False
+  syslog: False
+  config: None
+  limit_request_fields: 100
+  check_config: False
+  chdir: /home/ubuntu/rockford/examples/myproject
+  when_ready: <function WhenReady.when_ready at 0x7f7912366a60>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f791236ba60>
+  certfile: None
+  do_handshake_on_connect: False
+  pre_fork: <function Prefork.pre_fork at 0x7f7912366bf8>
+  enable_stdio_inheritance: False
+  group: 1000
+  limit_request_field_size: 8190
+  paste: None
+  max_requests: 0
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f791236b2f0>
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  on_exit: <function OnExit.on_exit at 0x7f791236bd90>
+  raw_env: []
+[2017-12-06 05:56:37 +0000] [14922] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 05:56:37 +0000] [14922] [DEBUG] Arbiter booted
+[2017-12-06 05:56:37 +0000] [14922] [INFO] Listening at: http://0.0.0.0:8000 (14922)
+[2017-12-06 05:56:37 +0000] [14922] [INFO] Using worker: sync
+[2017-12-06 05:56:37 +0000] [14925] [INFO] Booting worker with pid: 14925
+[2017-12-06 05:56:37 +0000] [14925] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named '.wsgi'
+[2017-12-06 05:56:37 +0000] [14925] [INFO] Worker exiting (pid: 14925)
+[2017-12-06 05:56:37 +0000] [14926] [INFO] Booting worker with pid: 14926
+[2017-12-06 05:56:37 +0000] [14926] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named '.wsgi'
+[2017-12-06 05:56:37 +0000] [14926] [INFO] Worker exiting (pid: 14926)
+[2017-12-06 05:56:37 +0000] [14927] [INFO] Booting worker with pid: 14927
+[2017-12-06 05:56:37 +0000] [14927] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named '.wsgi'
+[2017-12-06 05:56:37 +0000] [14927] [INFO] Worker exiting (pid: 14927)
+[2017-12-06 05:56:37 +0000] [14922] [INFO] Shutting down: Master
+[2017-12-06 05:56:37 +0000] [14922] [INFO] Reason: Worker failed to boot.
+[2017-12-06 05:58:37 +0000] [15002] [DEBUG] Current configuration:
+  spew: False
+  limit_request_field_size: 8190
+  keyfile: None
+  max_requests_jitter: 0
+  post_fork: <function Postfork.post_fork at 0x7f858ed35d90>
+  accesslog: None
+  logconfig: None
+  syslog: False
+  daemon: False
+  group: 1000
+  umask: 0
+  pre_exec: <function PreExec.pre_exec at 0x7f858ed3a488>
+  pre_request: <function PreRequest.pre_request at 0x7f858ed3a620>
+  proxy_protocol: False
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f858ed3abf8>
+  limit_request_line: 4094
+  initgroups: False
+  worker_class: sync
+  max_requests: 0
+  tmp_upload_dir: None
+  check_config: False
+  worker_int: <function WorkerInt.worker_int at 0x7f858ed3a158>
+  post_request: <function PostRequest.post_request at 0x7f858ed3a730>
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  timeout: 30
+  worker_exit: <function WorkerExit.worker_exit at 0x7f858ed3aa60>
+  capture_output: False
+  certfile: None
+  worker_tmp_dir: None
+  paste: None
+  proc_name: None
+  syslog_prefix: None
+  pidfile: None
+  logger_class: gunicorn.glogging.Logger
+  syslog_facility: user
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f858ed3a2f0>
+  child_exit: <function ChildExit.child_exit at 0x7f858ed3a8c8>
+  workers: 3
+  graceful_timeout: 30
+  keepalive: 2
+  backlog: 2048
+  user: 1000
+  ssl_version: 2
+  ca_certs: None
+  on_starting: <function OnStarting.on_starting at 0x7f858ed35730>
+  on_reload: <function OnReload.on_reload at 0x7f858ed358c8>
+  when_ready: <function WhenReady.when_ready at 0x7f858ed35a60>
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  loglevel: debug
+  syslog_addr: udp://localhost:514
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  bind: ['0.0.0.0:8000']
+  worker_connections: 1000
+  reload_engine: auto
+  config: None
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f858ed35f28>
+  sendfile: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  pythonpath: None
+  proxy_allow_ips: ['127.0.0.1']
+  pre_fork: <function Prefork.pre_fork at 0x7f858ed35bf8>
+  threads: 1
+  default_proc_name: .wsgi:application
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  reload: False
+  preload_app: False
+  raw_env: []
+  raw_paste_global_conf: []
+  limit_request_fields: 100
+  on_exit: <function OnExit.on_exit at 0x7f858ed3ad90>
+  cert_reqs: 0
+[2017-12-06 05:58:37 +0000] [15002] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 05:58:37 +0000] [15002] [DEBUG] Arbiter booted
+[2017-12-06 05:58:37 +0000] [15002] [INFO] Listening at: http://0.0.0.0:8000 (15002)
+[2017-12-06 05:58:37 +0000] [15002] [INFO] Using worker: sync
+[2017-12-06 05:58:37 +0000] [15005] [INFO] Booting worker with pid: 15005
+[2017-12-06 05:58:37 +0000] [15005] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named '.wsgi'
+[2017-12-06 05:58:37 +0000] [15005] [INFO] Worker exiting (pid: 15005)
+[2017-12-06 05:58:37 +0000] [15002] [INFO] Shutting down: Master
+[2017-12-06 05:58:37 +0000] [15002] [INFO] Reason: Worker failed to boot.
+[2017-12-06 05:59:07 +0000] [15019] [DEBUG] Current configuration:
+  ssl_version: 2
+  timeout: 30
+  backlog: 2048
+  limit_request_field_size: 8190
+  spew: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  worker_connections: 1000
+  max_requests: 0
+  initgroups: False
+  paste: None
+  when_ready: <function WhenReady.when_ready at 0x7fc509f9fa60>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fc509fa42f0>
+  pre_exec: <function PreExec.pre_exec at 0x7fc509fa4488>
+  cert_reqs: 0
+  do_handshake_on_connect: False
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fc509fa4bf8>
+  reload: False
+  check_config: False
+  limit_request_line: 4094
+  limit_request_fields: 100
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fc509f9ff28>
+  syslog_prefix: None
+  umask: 0
+  proxy_protocol: False
+  capture_output: False
+  child_exit: <function ChildExit.child_exit at 0x7fc509fa48c8>
+  loglevel: debug
+  statsd_prefix: 
+  pidfile: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  pythonpath: None
+  on_reload: <function OnReload.on_reload at 0x7fc509f9f8c8>
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  suppress_ragged_eofs: True
+  post_request: <function PostRequest.post_request at 0x7fc509fa4730>
+  graceful_timeout: 30
+  logconfig: None
+  user: 1000
+  raw_paste_global_conf: []
+  ca_certs: None
+  bind: ['0.0.0.0:8000']
+  pre_fork: <function Prefork.pre_fork at 0x7fc509f9fbf8>
+  post_fork: <function Postfork.post_fork at 0x7fc509f9fd90>
+  config: None
+  proc_name: None
+  worker_exit: <function WorkerExit.worker_exit at 0x7fc509fa4a60>
+  preload_app: False
+  sendfile: None
+  raw_env: []
+  worker_tmp_dir: None
+  threads: 1
+  logger_class: gunicorn.glogging.Logger
+  syslog_facility: user
+  keepalive: 2
+  ciphers: TLSv1
+  chdir: /home/ubuntu/rockford/examples/myproject
+  forwarded_allow_ips: ['127.0.0.1']
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  enable_stdio_inheritance: False
+  statsd_host: None
+  default_proc_name: testapp.wsgi:application
+  worker_int: <function WorkerInt.worker_int at 0x7fc509fa4158>
+  pre_request: <function PreRequest.pre_request at 0x7fc509fa4620>
+  group: 1000
+  on_starting: <function OnStarting.on_starting at 0x7fc509f9f730>
+  on_exit: <function OnExit.on_exit at 0x7fc509fa4d90>
+  worker_class: sync
+  max_requests_jitter: 0
+  daemon: False
+  reload_engine: auto
+  accesslog: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  tmp_upload_dir: None
+  workers: 3
+[2017-12-06 05:59:07 +0000] [15019] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 05:59:07 +0000] [15019] [DEBUG] Arbiter booted
+[2017-12-06 05:59:07 +0000] [15019] [INFO] Listening at: http://0.0.0.0:8000 (15019)
+[2017-12-06 05:59:07 +0000] [15019] [INFO] Using worker: sync
+[2017-12-06 05:59:07 +0000] [15022] [INFO] Booting worker with pid: 15022
+[2017-12-06 05:59:07 +0000] [15022] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 05:59:07 +0000] [15022] [INFO] Worker exiting (pid: 15022)
+[2017-12-06 05:59:07 +0000] [15019] [INFO] Shutting down: Master
+[2017-12-06 05:59:07 +0000] [15019] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:04:07 +0000] [15109] [DEBUG] Current configuration:
+  ciphers: TLSv1
+  syslog_addr: udp://localhost:514
+  when_ready: <function WhenReady.when_ready at 0x7fec7f6f2a60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fec7f6f2f28>
+  loglevel: debug
+  keyfile: None
+  syslog_prefix: None
+  child_exit: <function ChildExit.child_exit at 0x7fec7f6f78c8>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fec7f6f7a60>
+  proc_name: None
+  spew: False
+  pre_exec: <function PreExec.pre_exec at 0x7fec7f6f7488>
+  proxy_allow_ips: ['127.0.0.1']
+  post_request: <function PostRequest.post_request at 0x7fec7f6f7730>
+  certfile: None
+  ca_certs: None
+  workers: 3
+  worker_class: sync
+  max_requests_jitter: 0
+  graceful_timeout: 30
+  sendfile: None
+  limit_request_field_size: 8190
+  keepalive: 2
+  user: 1000
+  bind: ['0.0.0.0:8000']
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  logger_class: gunicorn.glogging.Logger
+  ssl_version: 2
+  pidfile: None
+  umask: 0
+  forwarded_allow_ips: ['127.0.0.1']
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fec7f6f2730>
+  timeout: 30
+  syslog: False
+  syslog_facility: user
+  initgroups: False
+  worker_int: <function WorkerInt.worker_int at 0x7fec7f6f7158>
+  tmp_upload_dir: None
+  default_proc_name: testapp.wsgi:application
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fec7f6f72f0>
+  preload_app: False
+  config: None
+  backlog: 2048
+  reload_engine: auto
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fec7f6f7bf8>
+  limit_request_line: 4094
+  reload: False
+  secure_scheme_headers: {'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  on_exit: <function OnExit.on_exit at 0x7fec7f6f7d90>
+  suppress_ragged_eofs: True
+  chdir: /home/ubuntu/rockford/examples/myproject
+  daemon: False
+  raw_env: []
+  worker_tmp_dir: None
+  group: 1000
+  proxy_protocol: False
+  raw_paste_global_conf: []
+  accesslog: None
+  enable_stdio_inheritance: False
+  on_reload: <function OnReload.on_reload at 0x7fec7f6f28c8>
+  pre_fork: <function Prefork.pre_fork at 0x7fec7f6f2bf8>
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  capture_output: False
+  logconfig: None
+  statsd_host: None
+  statsd_prefix: 
+  do_handshake_on_connect: False
+  limit_request_fields: 100
+  worker_connections: 1000
+  check_config: False
+  pythonpath: None
+  threads: 1
+  max_requests: 0
+  post_fork: <function Postfork.post_fork at 0x7fec7f6f2d90>
+  pre_request: <function PreRequest.pre_request at 0x7fec7f6f7620>
+  cert_reqs: 0
+[2017-12-06 06:04:07 +0000] [15109] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:04:07 +0000] [15109] [DEBUG] Arbiter booted
+[2017-12-06 06:04:07 +0000] [15109] [INFO] Listening at: http://0.0.0.0:8000 (15109)
+[2017-12-06 06:04:07 +0000] [15109] [INFO] Using worker: sync
+[2017-12-06 06:04:07 +0000] [15112] [INFO] Booting worker with pid: 15112
+[2017-12-06 06:04:07 +0000] [15112] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:04:07 +0000] [15112] [INFO] Worker exiting (pid: 15112)
+[2017-12-06 06:04:07 +0000] [15109] [INFO] Shutting down: Master
+[2017-12-06 06:04:07 +0000] [15109] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:07:52 +0000] [15186] [DEBUG] Current configuration:
+  worker_class: sync
+  threads: 1
+  syslog_prefix: None
+  on_reload: <function OnReload.on_reload at 0x7f3518eed8c8>
+  worker_int: <function WorkerInt.worker_int at 0x7f3518ef2158>
+  workers: 3
+  initgroups: False
+  pre_request: <function PreRequest.pre_request at 0x7f3518ef2620>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f3518ef2a60>
+  accesslog: None
+  cert_reqs: 0
+  when_ready: <function WhenReady.when_ready at 0x7f3518eeda60>
+  statsd_host: None
+  config: None
+  check_config: False
+  preload_app: False
+  suppress_ragged_eofs: True
+  limit_request_line: 4094
+  limit_request_fields: 100
+  reload: False
+  proxy_protocol: False
+  post_fork: <function Postfork.post_fork at 0x7f3518eedd90>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f3518eedf28>
+  keyfile: None
+  default_proc_name: testapp.wsgi:application
+  worker_connections: 1000
+  max_requests_jitter: 0
+  do_handshake_on_connect: False
+  enable_stdio_inheritance: False
+  backlog: 2048
+  syslog: False
+  umask: 0
+  forwarded_allow_ips: ['127.0.0.1']
+  loglevel: debug
+  ssl_version: 2
+  timeout: 30
+  keepalive: 2
+  pythonpath: None
+  pre_fork: <function Prefork.pre_fork at 0x7f3518eedbf8>
+  sendfile: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  on_exit: <function OnExit.on_exit at 0x7f3518ef2d90>
+  limit_request_field_size: 8190
+  logconfig: None
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  group: 1000
+  tmp_upload_dir: None
+  paste: None
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f3518ef22f0>
+  syslog_facility: user
+  reload_engine: auto
+  bind: ['0.0.0.0:8000']
+  graceful_timeout: 30
+  certfile: None
+  pre_exec: <function PreExec.pre_exec at 0x7f3518ef2488>
+  spew: False
+  post_request: <function PostRequest.post_request at 0x7f3518ef2730>
+  child_exit: <function ChildExit.child_exit at 0x7f3518ef28c8>
+  proc_name: None
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  syslog_addr: udp://localhost:514
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f3518ef2bf8>
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+  ca_certs: None
+  max_requests: 0
+  user: 1000
+  secure_scheme_headers: {'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  proxy_allow_ips: ['127.0.0.1']
+  raw_paste_global_conf: []
+  ciphers: TLSv1
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  on_starting: <function OnStarting.on_starting at 0x7f3518eed730>
+[2017-12-06 06:07:52 +0000] [15186] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:07:52 +0000] [15186] [DEBUG] Arbiter booted
+[2017-12-06 06:07:52 +0000] [15186] [INFO] Listening at: http://0.0.0.0:8000 (15186)
+[2017-12-06 06:07:52 +0000] [15186] [INFO] Using worker: sync
+[2017-12-06 06:07:52 +0000] [15189] [INFO] Booting worker with pid: 15189
+[2017-12-06 06:07:52 +0000] [15189] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:07:52 +0000] [15189] [INFO] Worker exiting (pid: 15189)
+[2017-12-06 06:07:52 +0000] [15186] [INFO] Shutting down: Master
+[2017-12-06 06:07:52 +0000] [15186] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:19:17 +0000] [15411] [DEBUG] Current configuration:
+  on_reload: <function OnReload.on_reload at 0x7f17a59208c8>
+  post_request: <function PostRequest.post_request at 0x7f17a5925730>
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  limit_request_fields: 100
+  worker_class: sync
+  worker_exit: <function WorkerExit.worker_exit at 0x7f17a5925a60>
+  umask: 0
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f17a5925bf8>
+  max_requests_jitter: 0
+  on_exit: <function OnExit.on_exit at 0x7f17a5925d90>
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  default_proc_name: testapp.wsgi:application
+  logger_class: gunicorn.glogging.Logger
+  statsd_host: None
+  backlog: 2048
+  threads: 1
+  proxy_protocol: False
+  syslog_addr: udp://localhost:514
+  enable_stdio_inheritance: False
+  statsd_prefix: 
+  worker_tmp_dir: None
+  paste: None
+  limit_request_line: 4094
+  pre_fork: <function Prefork.pre_fork at 0x7f17a5920bf8>
+  keyfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  daemon: False
+  reload: False
+  reload_engine: auto
+  pre_request: <function PreRequest.pre_request at 0x7f17a5925620>
+  bind: ['0.0.0.0:8000']
+  chdir: /home/ubuntu/rockford/examples/myproject
+  worker_connections: 1000
+  pythonpath: None
+  raw_paste_global_conf: []
+  graceful_timeout: 30
+  proxy_allow_ips: ['127.0.0.1']
+  logconfig: None
+  pidfile: None
+  initgroups: False
+  max_requests: 0
+  keepalive: 2
+  proc_name: None
+  on_starting: <function OnStarting.on_starting at 0x7f17a5920730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f17a5920f28>
+  sendfile: None
+  user: 1000
+  group: 1000
+  ciphers: TLSv1
+  raw_env: []
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  loglevel: debug
+  capture_output: False
+  syslog_prefix: None
+  certfile: None
+  ca_certs: None
+  accesslog: None
+  limit_request_field_size: 8190
+  workers: 3
+  forwarded_allow_ips: ['127.0.0.1']
+  timeout: 30
+  syslog: False
+  spew: False
+  check_config: False
+  when_ready: <function WhenReady.when_ready at 0x7f17a5920a60>
+  post_fork: <function Postfork.post_fork at 0x7f17a5920d90>
+  worker_int: <function WorkerInt.worker_int at 0x7f17a5925158>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f17a59252f0>
+  config: None
+  pre_exec: <function PreExec.pre_exec at 0x7f17a5925488>
+  syslog_facility: user
+  child_exit: <function ChildExit.child_exit at 0x7f17a59258c8>
+  preload_app: False
+[2017-12-06 06:19:17 +0000] [15411] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:19:17 +0000] [15411] [DEBUG] Arbiter booted
+[2017-12-06 06:19:17 +0000] [15411] [INFO] Listening at: http://0.0.0.0:8000 (15411)
+[2017-12-06 06:19:17 +0000] [15411] [INFO] Using worker: sync
+[2017-12-06 06:19:17 +0000] [15414] [INFO] Booting worker with pid: 15414
+[2017-12-06 06:19:17 +0000] [15414] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:19:17 +0000] [15414] [INFO] Worker exiting (pid: 15414)
+[2017-12-06 06:19:17 +0000] [15411] [INFO] Shutting down: Master
+[2017-12-06 06:19:17 +0000] [15411] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:20:42 +0000] [15468] [DEBUG] Current configuration:
+  proc_name: None
+  limit_request_field_size: 8190
+  sendfile: None
+  timeout: 30
+  paste: None
+  worker_connections: 1000
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  proxy_allow_ips: ['127.0.0.1']
+  syslog: False
+  spew: False
+  umask: 0
+  bind: ['0.0.0.0:8000']
+  statsd_host: None
+  default_proc_name: testapp.wsgi:application
+  on_starting: <function OnStarting.on_starting at 0x7f0f0a83c730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f0f0a83cf28>
+  post_request: <function PostRequest.post_request at 0x7f0f0a841730>
+  child_exit: <function ChildExit.child_exit at 0x7f0f0a8418c8>
+  backlog: 2048
+  ca_certs: None
+  pre_fork: <function Prefork.pre_fork at 0x7f0f0a83cbf8>
+  worker_int: <function WorkerInt.worker_int at 0x7f0f0a841158>
+  loglevel: debug
+  suppress_ragged_eofs: True
+  pre_request: <function PreRequest.pre_request at 0x7f0f0a841620>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f0f0a841bf8>
+  graceful_timeout: 30
+  limit_request_fields: 100
+  pidfile: None
+  worker_tmp_dir: None
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f0f0a8412f0>
+  capture_output: False
+  check_config: False
+  raw_env: []
+  pythonpath: None
+  keyfile: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  tmp_upload_dir: None
+  raw_paste_global_conf: []
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  syslog_addr: udp://localhost:514
+  reload: False
+  workers: 3
+  threads: 1
+  max_requests: 0
+  on_reload: <function OnReload.on_reload at 0x7f0f0a83c8c8>
+  config: None
+  post_fork: <function Postfork.post_fork at 0x7f0f0a83cd90>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f0f0a841a60>
+  cert_reqs: 0
+  pre_exec: <function PreExec.pre_exec at 0x7f0f0a841488>
+  max_requests_jitter: 0
+  keepalive: 2
+  daemon: False
+  when_ready: <function WhenReady.when_ready at 0x7f0f0a83ca60>
+  logger_class: gunicorn.glogging.Logger
+  syslog_prefix: None
+  statsd_prefix: 
+  ssl_version: 2
+  initgroups: False
+  logconfig: None
+  syslog_facility: user
+  limit_request_line: 4094
+  do_handshake_on_connect: False
+  user: 1000
+  reload_engine: auto
+  worker_class: sync
+  secure_scheme_headers: {'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https'}
+  certfile: None
+  on_exit: <function OnExit.on_exit at 0x7f0f0a841d90>
+  group: 1000
+  proxy_protocol: False
+  accesslog: None
+  enable_stdio_inheritance: False
+  preload_app: False
+  ciphers: TLSv1
+  forwarded_allow_ips: ['127.0.0.1']
+[2017-12-06 06:20:42 +0000] [15468] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:20:42 +0000] [15468] [DEBUG] Arbiter booted
+[2017-12-06 06:20:42 +0000] [15468] [INFO] Listening at: http://0.0.0.0:8000 (15468)
+[2017-12-06 06:20:42 +0000] [15468] [INFO] Using worker: sync
+[2017-12-06 06:20:42 +0000] [15471] [INFO] Booting worker with pid: 15471
+[2017-12-06 06:20:42 +0000] [15471] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:20:42 +0000] [15471] [INFO] Worker exiting (pid: 15471)
+[2017-12-06 06:20:42 +0000] [15472] [INFO] Booting worker with pid: 15472
+[2017-12-06 06:20:42 +0000] [15472] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:20:42 +0000] [15472] [INFO] Worker exiting (pid: 15472)
+[2017-12-06 06:20:42 +0000] [15468] [INFO] Shutting down: Master
+[2017-12-06 06:20:42 +0000] [15468] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:25:29 +0000] [15801] [DEBUG] Current configuration:
+  pidfile: None
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fd93e046f28>
+  cert_reqs: 0
+  worker_int: <function WorkerInt.worker_int at 0x7fd93e04b158>
+  sendfile: None
+  worker_tmp_dir: None
+  user: 1000
+  secure_scheme_headers: {'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https'}
+  workers: 3
+  certfile: None
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fd93e04b2f0>
+  accesslog: None
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  loglevel: debug
+  do_handshake_on_connect: False
+  syslog_prefix: None
+  statsd_prefix: 
+  group: 1000
+  pythonpath: None
+  proxy_allow_ips: ['127.0.0.1']
+  limit_request_fields: 100
+  ssl_version: 2
+  worker_exit: <function WorkerExit.worker_exit at 0x7fd93e04ba60>
+  reload_engine: auto
+  spew: False
+  ciphers: TLSv1
+  logger_class: gunicorn.glogging.Logger
+  threads: 1
+  max_requests_jitter: 0
+  preload_app: False
+  keepalive: 2
+  daemon: False
+  raw_paste_global_conf: []
+  on_reload: <function OnReload.on_reload at 0x7fd93e0468c8>
+  default_proc_name: testapp.wsgi:application
+  keyfile: None
+  ca_certs: None
+  proc_name: None
+  when_ready: <function WhenReady.when_ready at 0x7fd93e046a60>
+  pre_request: <function PreRequest.pre_request at 0x7fd93e04b620>
+  syslog: False
+  raw_env: []
+  reload: False
+  initgroups: False
+  suppress_ragged_eofs: True
+  statsd_host: None
+  paste: None
+  on_exit: <function OnExit.on_exit at 0x7fd93e04bd90>
+  config: None
+  child_exit: <function ChildExit.child_exit at 0x7fd93e04b8c8>
+  worker_class: sync
+  graceful_timeout: 30
+  on_starting: <function OnStarting.on_starting at 0x7fd93e046730>
+  worker_connections: 1000
+  max_requests: 0
+  enable_stdio_inheritance: False
+  limit_request_field_size: 8190
+  post_request: <function PostRequest.post_request at 0x7fd93e04b730>
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  chdir: /home/ubuntu/rockford/examples/myproject
+  tmp_upload_dir: None
+  pre_fork: <function Prefork.pre_fork at 0x7fd93e046bf8>
+  capture_output: False
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_facility: user
+  umask: 0
+  limit_request_line: 4094
+  backlog: 2048
+  timeout: 30
+  post_fork: <function Postfork.post_fork at 0x7fd93e046d90>
+  pre_exec: <function PreExec.pre_exec at 0x7fd93e04b488>
+  forwarded_allow_ips: ['127.0.0.1']
+  proxy_protocol: False
+  check_config: False
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fd93e04bbf8>
+  bind: ['0.0.0.0:8000']
+[2017-12-06 06:25:29 +0000] [15801] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:25:29 +0000] [15801] [DEBUG] Arbiter booted
+[2017-12-06 06:25:29 +0000] [15801] [INFO] Listening at: http://0.0.0.0:8000 (15801)
+[2017-12-06 06:25:29 +0000] [15801] [INFO] Using worker: sync
+[2017-12-06 06:25:29 +0000] [15804] [INFO] Booting worker with pid: 15804
+[2017-12-06 06:25:29 +0000] [15804] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:25:29 +0000] [15804] [INFO] Worker exiting (pid: 15804)
+[2017-12-06 06:25:29 +0000] [15805] [INFO] Booting worker with pid: 15805
+[2017-12-06 06:25:29 +0000] [15805] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:25:29 +0000] [15805] [INFO] Worker exiting (pid: 15805)
+[2017-12-06 06:25:29 +0000] [15801] [INFO] Shutting down: Master
+[2017-12-06 06:25:29 +0000] [15801] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:29:00 +0000] [15872] [DEBUG] Current configuration:
+  child_exit: <function ChildExit.child_exit at 0x7fd46466f8c8>
+  raw_paste_global_conf: []
+  statsd_prefix: 
+  spew: False
+  accesslog: None
+  when_ready: <function WhenReady.when_ready at 0x7fd46466aa60>
+  pre_fork: <function Prefork.pre_fork at 0x7fd46466abf8>
+  post_fork: <function Postfork.post_fork at 0x7fd46466ad90>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fd46466af28>
+  worker_int: <function WorkerInt.worker_int at 0x7fd46466f158>
+  threads: 1
+  keepalive: 2
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  pythonpath: None
+  limit_request_field_size: 8190
+  chdir: /home/ubuntu/.virtualenvs/testapp
+  on_reload: <function OnReload.on_reload at 0x7fd46466a8c8>
+  post_request: <function PostRequest.post_request at 0x7fd46466f730>
+  max_requests_jitter: 0
+  pidfile: None
+  umask: 0
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  on_starting: <function OnStarting.on_starting at 0x7fd46466a730>
+  worker_tmp_dir: None
+  reload: False
+  limit_request_line: 4094
+  syslog_prefix: None
+  cert_reqs: 0
+  pre_request: <function PreRequest.pre_request at 0x7fd46466f620>
+  proxy_allow_ips: ['127.0.0.1']
+  worker_class: sync
+  proxy_protocol: False
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  syslog: False
+  enable_stdio_inheritance: False
+  certfile: None
+  ciphers: TLSv1
+  worker_exit: <function WorkerExit.worker_exit at 0x7fd46466fa60>
+  limit_request_fields: 100
+  ssl_version: 2
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on'}
+  ca_certs: None
+  suppress_ragged_eofs: True
+  loglevel: debug
+  syslog_addr: udp://localhost:514
+  syslog_facility: user
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  timeout: 30
+  logconfig: None
+  preload_app: False
+  sendfile: None
+  raw_env: []
+  forwarded_allow_ips: ['127.0.0.1']
+  pre_exec: <function PreExec.pre_exec at 0x7fd46466f488>
+  do_handshake_on_connect: False
+  workers: 3
+  worker_connections: 1000
+  max_requests: 0
+  default_proc_name: testapp.wsgi:application
+  user: 1000
+  tmp_upload_dir: None
+  graceful_timeout: 30
+  on_exit: <function OnExit.on_exit at 0x7fd46466fd90>
+  statsd_host: None
+  group: 1000
+  initgroups: False
+  paste: None
+  check_config: False
+  proc_name: None
+  config: None
+  reload_engine: auto
+  daemon: False
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fd46466f2f0>
+  keyfile: None
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fd46466fbf8>
+[2017-12-06 06:29:00 +0000] [15872] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:29:00 +0000] [15872] [DEBUG] Arbiter booted
+[2017-12-06 06:29:00 +0000] [15872] [INFO] Listening at: http://0.0.0.0:8000 (15872)
+[2017-12-06 06:29:00 +0000] [15872] [INFO] Using worker: sync
+[2017-12-06 06:29:00 +0000] [15877] [INFO] Booting worker with pid: 15877
+[2017-12-06 06:29:00 +0000] [15877] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:29:00 +0000] [15877] [INFO] Worker exiting (pid: 15877)
+[2017-12-06 06:29:00 +0000] [15872] [INFO] Shutting down: Master
+[2017-12-06 06:29:00 +0000] [15872] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:29:09 +0000] [15882] [DEBUG] Current configuration:
+  user: 1000
+  umask: 0
+  accesslog: None
+  group: 1000
+  keyfile: None
+  preload_app: False
+  graceful_timeout: 30
+  initgroups: False
+  worker_class: sync
+  tmp_upload_dir: None
+  reload: False
+  spew: False
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  cert_reqs: 0
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  when_ready: <function WhenReady.when_ready at 0x7fd2bc9b7a60>
+  post_fork: <function Postfork.post_fork at 0x7fd2bc9b7d90>
+  post_request: <function PostRequest.post_request at 0x7fd2bc9bc730>
+  child_exit: <function ChildExit.child_exit at 0x7fd2bc9bc8c8>
+  capture_output: False
+  proxy_protocol: False
+  timeout: 30
+  default_proc_name: testapp.wsgi:application
+  max_requests_jitter: 0
+  loglevel: debug
+  logconfig: None
+  syslog_addr: udp://localhost:514
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  bind: ['0.0.0.0:8000']
+  keepalive: 2
+  on_starting: <function OnStarting.on_starting at 0x7fd2bc9b7730>
+  sendfile: None
+  raw_env: []
+  logger_class: gunicorn.glogging.Logger
+  syslog: False
+  ca_certs: None
+  forwarded_allow_ips: ['127.0.0.1']
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fd2bc9bcbf8>
+  limit_request_line: 4094
+  ssl_version: 2
+  syslog_prefix: None
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fd2bc9b7f28>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fd2bc9bc2f0>
+  pythonpath: None
+  worker_exit: <function WorkerExit.worker_exit at 0x7fd2bc9bca60>
+  threads: 1
+  worker_connections: 1000
+  daemon: False
+  certfile: None
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  statsd_prefix: 
+  pidfile: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https'}
+  paste: None
+  proxy_allow_ips: ['127.0.0.1']
+  do_handshake_on_connect: False
+  max_requests: 0
+  on_reload: <function OnReload.on_reload at 0x7fd2bc9b78c8>
+  worker_int: <function WorkerInt.worker_int at 0x7fd2bc9bc158>
+  proc_name: None
+  pre_fork: <function Prefork.pre_fork at 0x7fd2bc9b7bf8>
+  pre_exec: <function PreExec.pre_exec at 0x7fd2bc9bc488>
+  backlog: 2048
+  suppress_ragged_eofs: True
+  ciphers: TLSv1
+  chdir: /home/ubuntu/.virtualenvs/testapp
+  workers: 3
+  statsd_host: None
+  reload_engine: auto
+  worker_tmp_dir: None
+  raw_paste_global_conf: []
+  pre_request: <function PreRequest.pre_request at 0x7fd2bc9bc620>
+  config: None
+  check_config: False
+  on_exit: <function OnExit.on_exit at 0x7fd2bc9bcd90>
+[2017-12-06 06:29:09 +0000] [15882] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:29:09 +0000] [15882] [DEBUG] Arbiter booted
+[2017-12-06 06:29:09 +0000] [15882] [INFO] Listening at: http://0.0.0.0:8000 (15882)
+[2017-12-06 06:29:09 +0000] [15882] [INFO] Using worker: sync
+[2017-12-06 06:29:09 +0000] [15885] [INFO] Booting worker with pid: 15885
+[2017-12-06 06:29:09 +0000] [15885] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:29:09 +0000] [15885] [INFO] Worker exiting (pid: 15885)
+[2017-12-06 06:29:09 +0000] [15886] [INFO] Booting worker with pid: 15886
+[2017-12-06 06:29:09 +0000] [15886] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:29:09 +0000] [15886] [INFO] Worker exiting (pid: 15886)
+[2017-12-06 06:29:09 +0000] [15882] [INFO] Shutting down: Master
+[2017-12-06 06:29:09 +0000] [15882] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:36:17 +0000] [16033] [DEBUG] Current configuration:
+  forwarded_allow_ips: ['127.0.0.1']
+  raw_paste_global_conf: []
+  limit_request_field_size: 8190
+  ssl_version: 2
+  sendfile: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  tmp_upload_dir: None
+  pythonpath: None
+  bind: ['0.0.0.0:8000']
+  child_exit: <function ChildExit.child_exit at 0x7f4303f7b8c8>
+  group: 1000
+  ca_certs: None
+  spew: False
+  max_requests_jitter: 0
+  keepalive: 2
+  accesslog: None
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  statsd_host: None
+  secure_scheme_headers: {'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https'}
+  pre_fork: <function Prefork.pre_fork at 0x7f4303f76bf8>
+  graceful_timeout: 30
+  syslog: False
+  workers: 3
+  proxy_protocol: False
+  config: None
+  pre_request: <function PreRequest.pre_request at 0x7f4303f7b620>
+  reload_engine: auto
+  check_config: False
+  pre_exec: <function PreExec.pre_exec at 0x7f4303f7b488>
+  raw_env: []
+  paste: None
+  post_fork: <function Postfork.post_fork at 0x7f4303f76d90>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f4303f7bbf8>
+  default_proc_name: testapp.wsgi:application
+  syslog_prefix: None
+  preload_app: False
+  cert_reqs: 0
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f4303f76f28>
+  certfile: None
+  on_starting: <function OnStarting.on_starting at 0x7f4303f76730>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f4303f7ba60>
+  worker_connections: 1000
+  keyfile: None
+  enable_stdio_inheritance: False
+  on_exit: <function OnExit.on_exit at 0x7f4303f7bd90>
+  limit_request_fields: 100
+  ciphers: TLSv1
+  worker_tmp_dir: None
+  user: 1000
+  post_request: <function PostRequest.post_request at 0x7f4303f7b730>
+  worker_class: sync
+  reload: False
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f4303f7b2f0>
+  logconfig: None
+  syslog_facility: user
+  statsd_prefix: 
+  on_reload: <function OnReload.on_reload at 0x7f4303f768c8>
+  max_requests: 0
+  timeout: 30
+  when_ready: <function WhenReady.when_ready at 0x7f4303f76a60>
+  limit_request_line: 4094
+  backlog: 2048
+  daemon: False
+  pidfile: None
+  initgroups: False
+  proxy_allow_ips: ['127.0.0.1']
+  do_handshake_on_connect: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  syslog_addr: udp://localhost:514
+  proc_name: None
+  umask: 0
+  threads: 1
+  worker_int: <function WorkerInt.worker_int at 0x7f4303f7b158>
+  suppress_ragged_eofs: True
+[2017-12-06 06:36:17 +0000] [16033] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:36:17 +0000] [16033] [DEBUG] Arbiter booted
+[2017-12-06 06:36:17 +0000] [16033] [INFO] Listening at: http://0.0.0.0:8000 (16033)
+[2017-12-06 06:36:17 +0000] [16033] [INFO] Using worker: sync
+[2017-12-06 06:36:17 +0000] [16036] [INFO] Booting worker with pid: 16036
+[2017-12-06 06:36:17 +0000] [16036] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:36:17 +0000] [16036] [INFO] Worker exiting (pid: 16036)
+[2017-12-06 06:36:17 +0000] [16033] [INFO] Shutting down: Master
+[2017-12-06 06:36:17 +0000] [16033] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:37:17 +0000] [16115] [DEBUG] Current configuration:
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  check_config: False
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  limit_request_line: 4094
+  child_exit: <function ChildExit.child_exit at 0x7f76459a08c8>
+  config: None
+  worker_int: <function WorkerInt.worker_int at 0x7f76459a0158>
+  reload: False
+  on_starting: <function OnStarting.on_starting at 0x7f764599b730>
+  preload_app: False
+  raw_env: []
+  cert_reqs: 0
+  max_requests_jitter: 0
+  keepalive: 2
+  proxy_protocol: False
+  loglevel: debug
+  logger_class: gunicorn.glogging.Logger
+  keyfile: None
+  on_reload: <function OnReload.on_reload at 0x7f764599b8c8>
+  statsd_prefix: 
+  reload_engine: auto
+  certfile: None
+  limit_request_field_size: 8190
+  logconfig: None
+  pidfile: None
+  umask: 0
+  tmp_upload_dir: None
+  pythonpath: None
+  accesslog: None
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f764599bf28>
+  pre_exec: <function PreExec.pre_exec at 0x7f76459a0488>
+  worker_class: sync
+  worker_connections: 1000
+  graceful_timeout: 30
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  forwarded_allow_ips: ['127.0.0.1']
+  backlog: 2048
+  syslog_prefix: None
+  worker_exit: <function WorkerExit.worker_exit at 0x7f76459a0a60>
+  enable_stdio_inheritance: False
+  proxy_allow_ips: ['127.0.0.1']
+  post_fork: <function Postfork.post_fork at 0x7f764599bd90>
+  daemon: False
+  post_request: <function PostRequest.post_request at 0x7f76459a0730>
+  capture_output: False
+  paste: None
+  syslog: False
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f76459a02f0>
+  proc_name: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  when_ready: <function WhenReady.when_ready at 0x7f764599ba60>
+  user: 1000
+  spew: False
+  ciphers: TLSv1
+  sendfile: None
+  group: 1000
+  workers: 3
+  do_handshake_on_connect: False
+  worker_tmp_dir: None
+  max_requests: 0
+  syslog_addr: udp://localhost:514
+  syslog_facility: user
+  pre_fork: <function Prefork.pre_fork at 0x7f764599bbf8>
+  initgroups: False
+  limit_request_fields: 100
+  default_proc_name: testapp.wsgi:application
+  bind: ['0.0.0.0:8000']
+  raw_paste_global_conf: []
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f76459a0bf8>
+  ssl_version: 2
+  pre_request: <function PreRequest.pre_request at 0x7f76459a0620>
+  suppress_ragged_eofs: True
+  threads: 1
+  ca_certs: None
+  statsd_host: None
+  timeout: 30
+  on_exit: <function OnExit.on_exit at 0x7f76459a0d90>
+[2017-12-06 06:37:17 +0000] [16115] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:37:17 +0000] [16115] [DEBUG] Arbiter booted
+[2017-12-06 06:37:17 +0000] [16115] [INFO] Listening at: http://0.0.0.0:8000 (16115)
+[2017-12-06 06:37:17 +0000] [16115] [INFO] Using worker: sync
+[2017-12-06 06:37:17 +0000] [16118] [INFO] Booting worker with pid: 16118
+[2017-12-06 06:37:17 +0000] [16118] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:37:17 +0000] [16118] [INFO] Worker exiting (pid: 16118)
+[2017-12-06 06:37:17 +0000] [16115] [INFO] Shutting down: Master
+[2017-12-06 06:37:17 +0000] [16115] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:41:35 +0000] [16253] [DEBUG] Current configuration:
+  worker_int: <function WorkerInt.worker_int at 0x7f22ed1ad158>
+  sendfile: None
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f22ed1adbf8>
+  pythonpath: None
+  raw_paste_global_conf: []
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f22ed1ad2f0>
+  paste: None
+  post_fork: <function Postfork.post_fork at 0x7f22ed1a8d90>
+  tmp_upload_dir: None
+  forwarded_allow_ips: ['127.0.0.1']
+  suppress_ragged_eofs: True
+  preload_app: False
+  loglevel: debug
+  pidfile: None
+  do_handshake_on_connect: False
+  group: 1000
+  limit_request_field_size: 8190
+  max_requests: 0
+  limit_request_line: 4094
+  on_reload: <function OnReload.on_reload at 0x7f22ed1a88c8>
+  pre_exec: <function PreExec.pre_exec at 0x7f22ed1ad488>
+  raw_env: []
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  proxy_protocol: False
+  keepalive: 2
+  ssl_version: 2
+  proc_name: None
+  default_proc_name: testapp.wsgi:application
+  proxy_allow_ips: ['127.0.0.1']
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  certfile: None
+  reload_engine: auto
+  spew: False
+  check_config: False
+  worker_exit: <function WorkerExit.worker_exit at 0x7f22ed1ada60>
+  statsd_host: None
+  statsd_prefix: 
+  workers: 3
+  backlog: 2048
+  pre_fork: <function Prefork.pre_fork at 0x7f22ed1a8bf8>
+  bind: ['0.0.0.0:8000']
+  user: 1000
+  config: None
+  ca_certs: None
+  limit_request_fields: 100
+  on_exit: <function OnExit.on_exit at 0x7f22ed1add90>
+  enable_stdio_inheritance: False
+  initgroups: False
+  ciphers: TLSv1
+  on_starting: <function OnStarting.on_starting at 0x7f22ed1a8730>
+  syslog_facility: user
+  worker_tmp_dir: None
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f22ed1a8f28>
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  keyfile: None
+  worker_class: sync
+  syslog: False
+  syslog_prefix: None
+  threads: 1
+  daemon: False
+  syslog_addr: udp://localhost:514
+  post_request: <function PostRequest.post_request at 0x7f22ed1ad730>
+  accesslog: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  when_ready: <function WhenReady.when_ready at 0x7f22ed1a8a60>
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  logconfig: None
+  max_requests_jitter: 0
+  pre_request: <function PreRequest.pre_request at 0x7f22ed1ad620>
+  child_exit: <function ChildExit.child_exit at 0x7f22ed1ad8c8>
+  worker_connections: 1000
+  timeout: 30
+  cert_reqs: 0
+  graceful_timeout: 30
+  umask: 0
+  reload: False
+[2017-12-06 06:41:35 +0000] [16253] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:41:35 +0000] [16253] [DEBUG] Arbiter booted
+[2017-12-06 06:41:35 +0000] [16253] [INFO] Listening at: http://0.0.0.0:8000 (16253)
+[2017-12-06 06:41:35 +0000] [16253] [INFO] Using worker: sync
+[2017-12-06 06:41:35 +0000] [16256] [INFO] Booting worker with pid: 16256
+[2017-12-06 06:41:35 +0000] [16256] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:35 +0000] [16256] [INFO] Worker exiting (pid: 16256)
+[2017-12-06 06:41:35 +0000] [16253] [INFO] Shutting down: Master
+[2017-12-06 06:41:35 +0000] [16253] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:41:37 +0000] [16261] [DEBUG] Current configuration:
+  pre_request: <function PreRequest.pre_request at 0x7fc0ddc8f620>
+  preload_app: False
+  reload_engine: auto
+  worker_tmp_dir: None
+  keepalive: 2
+  on_exit: <function OnExit.on_exit at 0x7fc0ddc8fd90>
+  syslog_prefix: None
+  raw_env: []
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  reload: False
+  max_requests: 0
+  suppress_ragged_eofs: True
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fc0ddc8af28>
+  worker_int: <function WorkerInt.worker_int at 0x7fc0ddc8f158>
+  accesslog: None
+  threads: 1
+  limit_request_fields: 100
+  loglevel: debug
+  enable_stdio_inheritance: False
+  config: None
+  default_proc_name: testapp.wsgi:application
+  on_reload: <function OnReload.on_reload at 0x7fc0ddc8a8c8>
+  post_request: <function PostRequest.post_request at 0x7fc0ddc8f730>
+  syslog_addr: udp://localhost:514
+  backlog: 2048
+  proxy_protocol: False
+  on_starting: <function OnStarting.on_starting at 0x7fc0ddc8a730>
+  timeout: 30
+  initgroups: False
+  logger_class: gunicorn.glogging.Logger
+  statsd_prefix: 
+  limit_request_line: 4094
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fc0ddc8fbf8>
+  ciphers: TLSv1
+  workers: 3
+  graceful_timeout: 30
+  syslog_facility: user
+  proxy_allow_ips: ['127.0.0.1']
+  worker_exit: <function WorkerExit.worker_exit at 0x7fc0ddc8fa60>
+  cert_reqs: 0
+  max_requests_jitter: 0
+  statsd_host: None
+  sendfile: None
+  user: 1000
+  umask: 0
+  pythonpath: None
+  bind: ['0.0.0.0:8000']
+  pre_fork: <function Prefork.pre_fork at 0x7fc0ddc8abf8>
+  ca_certs: None
+  post_fork: <function Postfork.post_fork at 0x7fc0ddc8ad90>
+  worker_class: sync
+  spew: False
+  chdir: /home/ubuntu/rockford/examples/myproject
+  pidfile: None
+  group: 1000
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https'}
+  forwarded_allow_ips: ['127.0.0.1']
+  paste: None
+  proc_name: None
+  when_ready: <function WhenReady.when_ready at 0x7fc0ddc8aa60>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fc0ddc8f2f0>
+  pre_exec: <function PreExec.pre_exec at 0x7fc0ddc8f488>
+  syslog: False
+  certfile: None
+  worker_connections: 1000
+  child_exit: <function ChildExit.child_exit at 0x7fc0ddc8f8c8>
+  do_handshake_on_connect: False
+  capture_output: False
+  daemon: False
+  raw_paste_global_conf: []
+  check_config: False
+  keyfile: None
+  ssl_version: 2
+  limit_request_field_size: 8190
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  logconfig: None
+[2017-12-06 06:41:37 +0000] [16261] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:41:37 +0000] [16261] [DEBUG] Arbiter booted
+[2017-12-06 06:41:37 +0000] [16261] [INFO] Listening at: http://0.0.0.0:8000 (16261)
+[2017-12-06 06:41:37 +0000] [16261] [INFO] Using worker: sync
+[2017-12-06 06:41:37 +0000] [16264] [INFO] Booting worker with pid: 16264
+[2017-12-06 06:41:37 +0000] [16264] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:37 +0000] [16264] [INFO] Worker exiting (pid: 16264)
+[2017-12-06 06:41:37 +0000] [16265] [INFO] Booting worker with pid: 16265
+[2017-12-06 06:41:37 +0000] [16265] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:37 +0000] [16265] [INFO] Worker exiting (pid: 16265)
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 202, in run
+    self.manage_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 544, in manage_workers
+    self.spawn_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 612, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+    self.reap_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/bin/gunicorn", line 11, in <module>
+    sys.exit(run())
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 203, in run
+    super(Application, self).run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 231, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 344, in halt
+    self.stop()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+    self.reap_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2017-12-06 06:41:38 +0000] [16268] [DEBUG] Current configuration:
+  on_starting: <function OnStarting.on_starting at 0x7f1b2e12e730>
+  backlog: 2048
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  preload_app: False
+  raw_env: []
+  pidfile: None
+  ssl_version: 2
+  do_handshake_on_connect: False
+  timeout: 30
+  when_ready: <function WhenReady.when_ready at 0x7f1b2e12ea60>
+  proc_name: None
+  on_reload: <function OnReload.on_reload at 0x7f1b2e12e8c8>
+  pre_request: <function PreRequest.pre_request at 0x7f1b2e133620>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f1b2e133a60>
+  chdir: /home/ubuntu/rockford/examples/myproject
+  loglevel: debug
+  limit_request_line: 4094
+  syslog: False
+  forwarded_allow_ips: ['127.0.0.1']
+  reload: False
+  default_proc_name: testapp.wsgi:application
+  worker_connections: 1000
+  max_requests_jitter: 0
+  certfile: None
+  ca_certs: None
+  ciphers: TLSv1
+  pre_fork: <function Prefork.pre_fork at 0x7f1b2e12ebf8>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f1b2e12ef28>
+  worker_int: <function WorkerInt.worker_int at 0x7f1b2e133158>
+  post_request: <function PostRequest.post_request at 0x7f1b2e133730>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f1b2e133bf8>
+  reload_engine: auto
+  spew: False
+  limit_request_field_size: 8190
+  sendfile: None
+  logconfig: None
+  statsd_prefix: 
+  graceful_timeout: 30
+  initgroups: False
+  raw_paste_global_conf: []
+  logger_class: gunicorn.glogging.Logger
+  worker_tmp_dir: None
+  pythonpath: None
+  paste: None
+  proxy_protocol: False
+  post_fork: <function Postfork.post_fork at 0x7f1b2e12ed90>
+  syslog_prefix: None
+  bind: ['0.0.0.0:8000']
+  check_config: False
+  config: None
+  statsd_host: None
+  cert_reqs: 0
+  suppress_ragged_eofs: True
+  accesslog: None
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  user: 1000
+  syslog_facility: user
+  daemon: False
+  tmp_upload_dir: None
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f1b2e1332f0>
+  pre_exec: <function PreExec.pre_exec at 0x7f1b2e133488>
+  child_exit: <function ChildExit.child_exit at 0x7f1b2e1338c8>
+  keyfile: None
+  group: 1000
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on'}
+  proxy_allow_ips: ['127.0.0.1']
+  workers: 3
+  max_requests: 0
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  enable_stdio_inheritance: False
+  umask: 0
+  on_exit: <function OnExit.on_exit at 0x7f1b2e133d90>
+  worker_class: sync
+  threads: 1
+  keepalive: 2
+  limit_request_fields: 100
+[2017-12-06 06:41:38 +0000] [16268] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:41:38 +0000] [16268] [DEBUG] Arbiter booted
+[2017-12-06 06:41:38 +0000] [16268] [INFO] Listening at: http://0.0.0.0:8000 (16268)
+[2017-12-06 06:41:38 +0000] [16268] [INFO] Using worker: sync
+[2017-12-06 06:41:38 +0000] [16271] [INFO] Booting worker with pid: 16271
+[2017-12-06 06:41:38 +0000] [16271] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:38 +0000] [16271] [INFO] Worker exiting (pid: 16271)
+[2017-12-06 06:41:38 +0000] [16272] [INFO] Booting worker with pid: 16272
+[2017-12-06 06:41:38 +0000] [16272] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:38 +0000] [16272] [INFO] Worker exiting (pid: 16272)
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 202, in run
+    self.manage_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 544, in manage_workers
+    self.spawn_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 612, in spawn_workers
+    time.sleep(0.1 * random.random())
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+    self.reap_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/bin/gunicorn", line 11, in <module>
+    sys.exit(run())
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 203, in run
+    super(Application, self).run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 231, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 344, in halt
+    self.stop()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+    self.reap_workers()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2017-12-06 06:41:39 +0000] [16275] [DEBUG] Current configuration:
+  initgroups: False
+  forwarded_allow_ips: ['127.0.0.1']
+  backlog: 2048
+  workers: 3
+  sendfile: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  pre_fork: <function Prefork.pre_fork at 0x7f7535784bf8>
+  post_fork: <function Postfork.post_fork at 0x7f7535784d90>
+  timeout: 30
+  bind: ['0.0.0.0:8000']
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f7535784f28>
+  child_exit: <function ChildExit.child_exit at 0x7f75357898c8>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f7535789bf8>
+  spew: False
+  syslog_addr: udp://localhost:514
+  reload_engine: auto
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  worker_connections: 1000
+  keepalive: 2
+  when_ready: <function WhenReady.when_ready at 0x7f7535784a60>
+  pythonpath: None
+  proxy_protocol: False
+  config: None
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  reload: False
+  daemon: False
+  worker_tmp_dir: None
+  umask: 0
+  secure_scheme_headers: {'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  syslog_facility: user
+  suppress_ragged_eofs: True
+  worker_int: <function WorkerInt.worker_int at 0x7f7535789158>
+  check_config: False
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f75357892f0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f7535789a60>
+  capture_output: False
+  do_handshake_on_connect: False
+  logconfig: None
+  limit_request_fields: 100
+  post_request: <function PostRequest.post_request at 0x7f7535789730>
+  syslog_prefix: None
+  keyfile: None
+  statsd_prefix: 
+  proxy_allow_ips: ['127.0.0.1']
+  raw_paste_global_conf: []
+  threads: 1
+  max_requests_jitter: 0
+  on_reload: <function OnReload.on_reload at 0x7f75357848c8>
+  pre_exec: <function PreExec.pre_exec at 0x7f7535789488>
+  accesslog: None
+  logger_class: gunicorn.glogging.Logger
+  limit_request_field_size: 8190
+  user: 1000
+  syslog: False
+  enable_stdio_inheritance: False
+  on_starting: <function OnStarting.on_starting at 0x7f7535784730>
+  certfile: None
+  preload_app: False
+  raw_env: []
+  ssl_version: 2
+  statsd_host: None
+  worker_class: sync
+  pidfile: None
+  tmp_upload_dir: None
+  paste: None
+  ca_certs: None
+  loglevel: debug
+  cert_reqs: 0
+  graceful_timeout: 30
+  group: 1000
+  proc_name: None
+  default_proc_name: testapp.wsgi:application
+  limit_request_line: 4094
+  max_requests: 0
+  pre_request: <function PreRequest.pre_request at 0x7f7535789620>
+  on_exit: <function OnExit.on_exit at 0x7f7535789d90>
+  ciphers: TLSv1
+[2017-12-06 06:41:39 +0000] [16275] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:41:39 +0000] [16275] [DEBUG] Arbiter booted
+[2017-12-06 06:41:39 +0000] [16275] [INFO] Listening at: http://0.0.0.0:8000 (16275)
+[2017-12-06 06:41:39 +0000] [16275] [INFO] Using worker: sync
+[2017-12-06 06:41:39 +0000] [16278] [INFO] Booting worker with pid: 16278
+[2017-12-06 06:41:39 +0000] [16278] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:39 +0000] [16278] [INFO] Worker exiting (pid: 16278)
+[2017-12-06 06:41:39 +0000] [16275] [INFO] Shutting down: Master
+[2017-12-06 06:41:39 +0000] [16275] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:41:40 +0000] [16281] [DEBUG] Current configuration:
+  ssl_version: 2
+  backlog: 2048
+  group: 1000
+  on_reload: <function OnReload.on_reload at 0x7f92c61a18c8>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f92c61a1f28>
+  pre_request: <function PreRequest.pre_request at 0x7f92c61a6620>
+  keyfile: None
+  suppress_ragged_eofs: True
+  bind: ['0.0.0.0:8000']
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f92c61a62f0>
+  loglevel: debug
+  reload: False
+  syslog_facility: user
+  worker_class: sync
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  on_exit: <function OnExit.on_exit at 0x7f92c61a6d90>
+  raw_env: []
+  user: 1000
+  paste: None
+  statsd_host: None
+  ca_certs: None
+  daemon: False
+  worker_tmp_dir: None
+  forwarded_allow_ips: ['127.0.0.1']
+  proxy_protocol: False
+  capture_output: False
+  workers: 3
+  check_config: False
+  keepalive: 2
+  when_ready: <function WhenReady.when_ready at 0x7f92c61a1a60>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f92c61a6a60>
+  syslog: False
+  syslog_prefix: None
+  statsd_prefix: 
+  proc_name: None
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  default_proc_name: testapp.wsgi:application
+  syslog_addr: udp://localhost:514
+  worker_int: <function WorkerInt.worker_int at 0x7f92c61a6158>
+  pre_exec: <function PreExec.pre_exec at 0x7f92c61a6488>
+  child_exit: <function ChildExit.child_exit at 0x7f92c61a68c8>
+  ciphers: TLSv1
+  post_request: <function PostRequest.post_request at 0x7f92c61a6730>
+  do_handshake_on_connect: False
+  threads: 1
+  on_starting: <function OnStarting.on_starting at 0x7f92c61a1730>
+  preload_app: False
+  initgroups: False
+  worker_connections: 1000
+  max_requests: 0
+  timeout: 30
+  sendfile: None
+  pidfile: None
+  tmp_upload_dir: None
+  accesslog: None
+  enable_stdio_inheritance: False
+  pythonpath: None
+  post_fork: <function Postfork.post_fork at 0x7f92c61a1d90>
+  graceful_timeout: 30
+  certfile: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  umask: 0
+  pre_fork: <function Prefork.pre_fork at 0x7f92c61a1bf8>
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  secure_scheme_headers: {'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  proxy_allow_ips: ['127.0.0.1']
+  raw_paste_global_conf: []
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f92c61a6bf8>
+  reload_engine: auto
+  spew: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  config: None
+  cert_reqs: 0
+  max_requests_jitter: 0
+  limit_request_line: 4094
+[2017-12-06 06:41:40 +0000] [16281] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:41:40 +0000] [16281] [DEBUG] Arbiter booted
+[2017-12-06 06:41:40 +0000] [16281] [INFO] Listening at: http://0.0.0.0:8000 (16281)
+[2017-12-06 06:41:40 +0000] [16281] [INFO] Using worker: sync
+[2017-12-06 06:41:40 +0000] [16284] [INFO] Booting worker with pid: 16284
+[2017-12-06 06:41:40 +0000] [16284] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:40 +0000] [16284] [INFO] Worker exiting (pid: 16284)
+[2017-12-06 06:41:40 +0000] [16285] [INFO] Booting worker with pid: 16285
+[2017-12-06 06:41:40 +0000] [16285] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:40 +0000] [16285] [INFO] Worker exiting (pid: 16285)
+[2017-12-06 06:41:40 +0000] [16281] [INFO] Shutting down: Master
+[2017-12-06 06:41:40 +0000] [16281] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:41:40 +0000] [16288] [DEBUG] Current configuration:
+  bind: ['0.0.0.0:8000']
+  post_request: <function PostRequest.post_request at 0x7f3b69209730>
+  group: 1000
+  child_exit: <function ChildExit.child_exit at 0x7f3b692098c8>
+  tmp_upload_dir: None
+  statsd_host: None
+  when_ready: <function WhenReady.when_ready at 0x7f3b69204a60>
+  chdir: /home/ubuntu/rockford/examples/myproject
+  threads: 1
+  do_handshake_on_connect: False
+  limit_request_field_size: 8190
+  graceful_timeout: 30
+  post_fork: <function Postfork.post_fork at 0x7f3b69204d90>
+  logconfig: None
+  statsd_prefix: 
+  sendfile: None
+  daemon: False
+  user: 1000
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  max_requests_jitter: 0
+  keepalive: 2
+  initgroups: False
+  cert_reqs: 0
+  pre_fork: <function Prefork.pre_fork at 0x7f3b69204bf8>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f3b692092f0>
+  reload: False
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on'}
+  syslog_facility: user
+  preload_app: False
+  ssl_version: 2
+  proc_name: None
+  default_proc_name: testapp.wsgi:application
+  config: None
+  timeout: 30
+  check_config: False
+  syslog: False
+  limit_request_line: 4094
+  suppress_ragged_eofs: True
+  backlog: 2048
+  worker_int: <function WorkerInt.worker_int at 0x7f3b69209158>
+  worker_class: sync
+  umask: 0
+  pythonpath: None
+  paste: None
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  certfile: None
+  ca_certs: None
+  raw_paste_global_conf: []
+  pre_request: <function PreRequest.pre_request at 0x7f3b69209620>
+  accesslog: None
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  syslog_addr: udp://localhost:514
+  syslog_prefix: None
+  enable_stdio_inheritance: False
+  on_starting: <function OnStarting.on_starting at 0x7f3b69204730>
+  on_reload: <function OnReload.on_reload at 0x7f3b692048c8>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f3b69204f28>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f3b69209a60>
+  on_exit: <function OnExit.on_exit at 0x7f3b69209d90>
+  raw_env: []
+  reload_engine: auto
+  limit_request_fields: 100
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  loglevel: debug
+  spew: False
+  keyfile: None
+  pidfile: None
+  worker_tmp_dir: None
+  ciphers: TLSv1
+  workers: 3
+  worker_connections: 1000
+  max_requests: 0
+  forwarded_allow_ips: ['127.0.0.1']
+  pre_exec: <function PreExec.pre_exec at 0x7f3b69209488>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f3b69209bf8>
+[2017-12-06 06:41:40 +0000] [16288] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:41:40 +0000] [16288] [DEBUG] Arbiter booted
+[2017-12-06 06:41:40 +0000] [16288] [INFO] Listening at: http://0.0.0.0:8000 (16288)
+[2017-12-06 06:41:40 +0000] [16288] [INFO] Using worker: sync
+[2017-12-06 06:41:40 +0000] [16291] [INFO] Booting worker with pid: 16291
+[2017-12-06 06:41:40 +0000] [16291] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:40 +0000] [16291] [INFO] Worker exiting (pid: 16291)
+[2017-12-06 06:41:40 +0000] [16292] [INFO] Booting worker with pid: 16292
+[2017-12-06 06:41:40 +0000] [16292] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:40 +0000] [16292] [INFO] Worker exiting (pid: 16292)
+[2017-12-06 06:41:40 +0000] [16293] [INFO] Booting worker with pid: 16293
+[2017-12-06 06:41:40 +0000] [16293] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:40 +0000] [16293] [INFO] Worker exiting (pid: 16293)
+[2017-12-06 06:41:40 +0000] [16288] [INFO] Shutting down: Master
+[2017-12-06 06:41:40 +0000] [16288] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:41:41 +0000] [16296] [DEBUG] Current configuration:
+  bind: ['0.0.0.0:8000']
+  tmp_upload_dir: None
+  raw_paste_global_conf: []
+  ca_certs: None
+  max_requests: 0
+  syslog_addr: udp://localhost:514
+  syslog: False
+  preload_app: False
+  daemon: False
+  config: None
+  loglevel: debug
+  when_ready: <function WhenReady.when_ready at 0x7febfc2ffa60>
+  syslog_facility: user
+  threads: 1
+  user: 1000
+  proxy_protocol: False
+  limit_request_line: 4094
+  pre_fork: <function Prefork.pre_fork at 0x7febfc2ffbf8>
+  post_fork: <function Postfork.post_fork at 0x7febfc2ffd90>
+  default_proc_name: testapp.wsgi:application
+  logger_class: gunicorn.glogging.Logger
+  pre_request: <function PreRequest.pre_request at 0x7febfc304620>
+  max_requests_jitter: 0
+  timeout: 30
+  logconfig: None
+  syslog_prefix: None
+  paste: None
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7febfc2fff28>
+  chdir: /home/ubuntu/rockford/examples/myproject
+  on_exit: <function OnExit.on_exit at 0x7febfc304d90>
+  enable_stdio_inheritance: False
+  statsd_host: None
+  child_exit: <function ChildExit.child_exit at 0x7febfc3048c8>
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  spew: False
+  cert_reqs: 0
+  worker_int: <function WorkerInt.worker_int at 0x7febfc304158>
+  limit_request_fields: 100
+  group: 1000
+  proxy_allow_ips: ['127.0.0.1']
+  capture_output: False
+  statsd_prefix: 
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7febfc304bf8>
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  backlog: 2048
+  post_request: <function PostRequest.post_request at 0x7febfc304730>
+  raw_env: []
+  graceful_timeout: 30
+  initgroups: False
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https'}
+  pythonpath: None
+  worker_abort: <function WorkerAbort.worker_abort at 0x7febfc3042f0>
+  accesslog: None
+  workers: 3
+  worker_class: sync
+  limit_request_field_size: 8190
+  worker_tmp_dir: None
+  umask: 0
+  on_starting: <function OnStarting.on_starting at 0x7febfc2ff730>
+  proc_name: None
+  pre_exec: <function PreExec.pre_exec at 0x7febfc304488>
+  reload: False
+  reload_engine: auto
+  check_config: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  worker_connections: 1000
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  worker_exit: <function WorkerExit.worker_exit at 0x7febfc304a60>
+  sendfile: None
+  forwarded_allow_ips: ['127.0.0.1']
+  ciphers: TLSv1
+  on_reload: <function OnReload.on_reload at 0x7febfc2ff8c8>
+  pidfile: None
+  keepalive: 2
+[2017-12-06 06:41:41 +0000] [16296] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:41:41 +0000] [16296] [DEBUG] Arbiter booted
+[2017-12-06 06:41:41 +0000] [16296] [INFO] Listening at: http://0.0.0.0:8000 (16296)
+[2017-12-06 06:41:41 +0000] [16296] [INFO] Using worker: sync
+[2017-12-06 06:41:41 +0000] [16299] [INFO] Booting worker with pid: 16299
+[2017-12-06 06:41:41 +0000] [16299] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:41 +0000] [16299] [INFO] Worker exiting (pid: 16299)
+[2017-12-06 06:41:41 +0000] [16300] [INFO] Booting worker with pid: 16300
+[2017-12-06 06:41:41 +0000] [16300] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:41 +0000] [16300] [INFO] Worker exiting (pid: 16300)
+[2017-12-06 06:41:41 +0000] [16296] [INFO] Shutting down: Master
+[2017-12-06 06:41:41 +0000] [16296] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:41:41 +0000] [16303] [DEBUG] Current configuration:
+  chdir: /home/ubuntu/rockford/examples/myproject
+  post_fork: <function Postfork.post_fork at 0x7f36b6f36d90>
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  limit_request_field_size: 8190
+  enable_stdio_inheritance: False
+  raw_env: []
+  initgroups: False
+  on_reload: <function OnReload.on_reload at 0x7f36b6f368c8>
+  on_exit: <function OnExit.on_exit at 0x7f36b6f3bd90>
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  pre_exec: <function PreExec.pre_exec at 0x7f36b6f3b488>
+  max_requests_jitter: 0
+  worker_int: <function WorkerInt.worker_int at 0x7f36b6f3b158>
+  limit_request_fields: 100
+  worker_connections: 1000
+  reload_engine: auto
+  on_starting: <function OnStarting.on_starting at 0x7f36b6f36730>
+  child_exit: <function ChildExit.child_exit at 0x7f36b6f3b8c8>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f36b6f3ba60>
+  timeout: 30
+  sendfile: None
+  pidfile: None
+  proxy_allow_ips: ['127.0.0.1']
+  certfile: None
+  ca_certs: None
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f36b6f3bbf8>
+  backlog: 2048
+  config: None
+  reload: False
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f36b6f36f28>
+  preload_app: False
+  daemon: False
+  umask: 0
+  pre_fork: <function Prefork.pre_fork at 0x7f36b6f36bf8>
+  keepalive: 2
+  accesslog: None
+  statsd_prefix: 
+  user: 1000
+  group: 1000
+  do_handshake_on_connect: False
+  syslog_facility: user
+  bind: ['0.0.0.0:8000']
+  syslog: False
+  pythonpath: None
+  workers: 3
+  suppress_ragged_eofs: True
+  default_proc_name: testapp.wsgi:application
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  loglevel: debug
+  max_requests: 0
+  graceful_timeout: 30
+  logconfig: None
+  statsd_host: None
+  proc_name: None
+  keyfile: None
+  when_ready: <function WhenReady.when_ready at 0x7f36b6f36a60>
+  worker_class: sync
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  syslog_prefix: None
+  limit_request_line: 4094
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f36b6f3b2f0>
+  check_config: False
+  post_request: <function PostRequest.post_request at 0x7f36b6f3b730>
+  worker_tmp_dir: None
+  threads: 1
+  ssl_version: 2
+  cert_reqs: 0
+  tmp_upload_dir: None
+  forwarded_allow_ips: ['127.0.0.1']
+  paste: None
+  proxy_protocol: False
+  raw_paste_global_conf: []
+  syslog_addr: udp://localhost:514
+  spew: False
+  ciphers: TLSv1
+  pre_request: <function PreRequest.pre_request at 0x7f36b6f3b620>
+[2017-12-06 06:41:41 +0000] [16303] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:41:41 +0000] [16303] [DEBUG] Arbiter booted
+[2017-12-06 06:41:41 +0000] [16303] [INFO] Listening at: http://0.0.0.0:8000 (16303)
+[2017-12-06 06:41:41 +0000] [16303] [INFO] Using worker: sync
+[2017-12-06 06:41:41 +0000] [16306] [INFO] Booting worker with pid: 16306
+[2017-12-06 06:41:41 +0000] [16306] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:41:41 +0000] [16306] [INFO] Worker exiting (pid: 16306)
+[2017-12-06 06:41:41 +0000] [16303] [INFO] Shutting down: Master
+[2017-12-06 06:41:41 +0000] [16303] [INFO] Reason: Worker failed to boot.
+./start_gnicorn.sh: 16: exec: gunicorn: not found
+[2017-12-06 06:42:12 +0000] [16322] [DEBUG] Current configuration:
+  pre_exec: <function PreExec.pre_exec at 0x7fafb7aa2488>
+  workers: 3
+  worker_class: sync
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  when_ready: <function WhenReady.when_ready at 0x7fafb7a9da60>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fafb7a9df28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fafb7aa2bf8>
+  preload_app: False
+  raw_env: []
+  tmp_upload_dir: None
+  bind: ['0.0.0.0:8000']
+  keepalive: 2
+  pre_request: <function PreRequest.pre_request at 0x7fafb7aa2620>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fafb7aa2a60>
+  spew: False
+  limit_request_fields: 100
+  suppress_ragged_eofs: True
+  reload: False
+  pythonpath: None
+  statsd_prefix: 
+  paste: None
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fafb7aa22f0>
+  timeout: 30
+  ssl_version: 2
+  ca_certs: None
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  syslog: False
+  sendfile: None
+  syslog_addr: udp://localhost:514
+  daemon: False
+  umask: 0
+  post_fork: <function Postfork.post_fork at 0x7fafb7a9dd90>
+  proxy_protocol: False
+  post_request: <function PostRequest.post_request at 0x7fafb7aa2730>
+  keyfile: None
+  on_starting: <function OnStarting.on_starting at 0x7fafb7a9d730>
+  chdir: /home/ubuntu/rockford/examples/myproject
+  initgroups: False
+  limit_request_line: 4094
+  forwarded_allow_ips: ['127.0.0.1']
+  raw_paste_global_conf: []
+  on_reload: <function OnReload.on_reload at 0x7fafb7a9d8c8>
+  pre_fork: <function Prefork.pre_fork at 0x7fafb7a9dbf8>
+  worker_int: <function WorkerInt.worker_int at 0x7fafb7aa2158>
+  child_exit: <function ChildExit.child_exit at 0x7fafb7aa28c8>
+  logconfig: None
+  graceful_timeout: 30
+  do_handshake_on_connect: False
+  check_config: False
+  accesslog: None
+  worker_tmp_dir: None
+  certfile: None
+  cert_reqs: 0
+  ciphers: TLSv1
+  limit_request_field_size: 8190
+  syslog_prefix: None
+  proc_name: None
+  enable_stdio_inheritance: False
+  user: 1000
+  default_proc_name: testapp.wsgi:application
+  threads: 1
+  on_exit: <function OnExit.on_exit at 0x7fafb7aa2d90>
+  pidfile: None
+  loglevel: debug
+  backlog: 2048
+  group: 1000
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https'}
+  proxy_allow_ips: ['127.0.0.1']
+  config: None
+  reload_engine: auto
+  syslog_facility: user
+  statsd_host: None
+[2017-12-06 06:42:12 +0000] [16322] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:42:12 +0000] [16322] [DEBUG] Arbiter booted
+[2017-12-06 06:42:12 +0000] [16322] [INFO] Listening at: http://0.0.0.0:8000 (16322)
+[2017-12-06 06:42:12 +0000] [16322] [INFO] Using worker: sync
+[2017-12-06 06:42:12 +0000] [16325] [INFO] Booting worker with pid: 16325
+[2017-12-06 06:42:12 +0000] [16325] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:42:12 +0000] [16325] [INFO] Worker exiting (pid: 16325)
+[2017-12-06 06:42:12 +0000] [16322] [INFO] Shutting down: Master
+[2017-12-06 06:42:12 +0000] [16322] [INFO] Reason: Worker failed to boot.
+[2017-12-06 06:43:14 +0000] [16351] [DEBUG] Current configuration:
+  limit_request_fields: 100
+  worker_class: sync
+  loglevel: debug
+  statsd_host: None
+  on_reload: <function OnReload.on_reload at 0x7f5435dca8c8>
+  when_ready: <function WhenReady.when_ready at 0x7f5435dcaa60>
+  raw_env: []
+  group: 1000
+  initgroups: False
+  paste: None
+  keyfile: None
+  ssl_version: 2
+  ca_certs: None
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+  pre_request: <function PreRequest.pre_request at 0x7f5435dcf620>
+  proxy_allow_ips: ['127.0.0.1']
+  certfile: None
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  pre_fork: <function Prefork.pre_fork at 0x7f5435dcabf8>
+  child_exit: <function ChildExit.child_exit at 0x7f5435dcf8c8>
+  statsd_prefix: 
+  umask: 0
+  forwarded_allow_ips: ['127.0.0.1']
+  spew: False
+  worker_int: <function WorkerInt.worker_int at 0x7f5435dcf158>
+  post_request: <function PostRequest.post_request at 0x7f5435dcf730>
+  limit_request_field_size: 8190
+  default_proc_name: testapp.wsgi:application
+  threads: 1
+  max_requests: 0
+  accesslog: None
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  check_config: False
+  syslog: False
+  syslog_prefix: None
+  graceful_timeout: 30
+  proxy_protocol: False
+  post_fork: <function Postfork.post_fork at 0x7f5435dcad90>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f5435dcf2f0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f5435dcfbf8>
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  do_handshake_on_connect: False
+  preload_app: False
+  sendfile: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  worker_tmp_dir: None
+  user: 1000
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  on_starting: <function OnStarting.on_starting at 0x7f5435dca730>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f5435dcaf28>
+  pre_exec: <function PreExec.pre_exec at 0x7f5435dcf488>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f5435dcfa60>
+  daemon: False
+  pythonpath: None
+  logconfig: None
+  max_requests_jitter: 0
+  syslog_addr: udp://localhost:514
+  reload: False
+  reload_engine: auto
+  cert_reqs: 0
+  suppress_ragged_eofs: True
+  workers: 3
+  worker_connections: 1000
+  timeout: 30
+  pidfile: None
+  proc_name: None
+  syslog_facility: user
+  limit_request_line: 4094
+  tmp_upload_dir: None
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  enable_stdio_inheritance: False
+  keepalive: 2
+  on_exit: <function OnExit.on_exit at 0x7f5435dcfd90>
+  config: None
+[2017-12-06 06:43:14 +0000] [16351] [INFO] Starting gunicorn 19.7.1
+[2017-12-06 06:43:14 +0000] [16351] [DEBUG] Arbiter booted
+[2017-12-06 06:43:14 +0000] [16351] [INFO] Listening at: http://0.0.0.0:8000 (16351)
+[2017-12-06 06:43:14 +0000] [16351] [INFO] Using worker: sync
+[2017-12-06 06:43:14 +0000] [16354] [INFO] Booting worker with pid: 16354
+[2017-12-06 06:43:14 +0000] [16354] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-06 06:43:14 +0000] [16354] [INFO] Worker exiting (pid: 16354)
+[2017-12-06 06:43:14 +0000] [16351] [INFO] Shutting down: Master
+[2017-12-06 06:43:14 +0000] [16351] [INFO] Reason: Worker failed to boot.
+[2017-12-07 05:57:16 +0000] [27623] [DEBUG] Current configuration:
+  do_handshake_on_connect: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  umask: 0
+  limit_request_field_size: 8190
+  syslog_addr: udp://localhost:514
+  syslog_facility: user
+  suppress_ragged_eofs: True
+  on_reload: <function OnReload.on_reload at 0x7ff4fd8128c8>
+  pre_exec: <function PreExec.pre_exec at 0x7ff4fd817488>
+  default_proc_name: testapp.wsgi:application
+  preload_app: False
+  daemon: False
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  proxy_protocol: False
+  reload: False
+  check_config: False
+  worker_int: <function WorkerInt.worker_int at 0x7ff4fd817158>
+  sendfile: None
+  chdir: /home/ubuntu/rockford/examples/myproject
+  proxy_allow_ips: ['127.0.0.1']
+  accesslog: None
+  logconfig: None
+  syslog_prefix: None
+  enable_stdio_inheritance: False
+  max_requests: 0
+  timeout: 30
+  statsd_host: None
+  bind: ['0.0.0.0:8000']
+  pre_request: <function PreRequest.pre_request at 0x7ff4fd817620>
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  when_ready: <function WhenReady.when_ready at 0x7ff4fd812a60>
+  spew: False
+  child_exit: <function ChildExit.child_exit at 0x7ff4fd8178c8>
+  limit_request_fields: 100
+  worker_connections: 1000
+  keepalive: 2
+  on_exit: <function OnExit.on_exit at 0x7ff4fd817d90>
+  capture_output: False
+  proc_name: None
+  keyfile: None
+  cert_reqs: 0
+  ca_certs: None
+  logger_class: gunicorn.glogging.Logger
+  on_starting: <function OnStarting.on_starting at 0x7ff4fd812730>
+  pre_fork: <function Prefork.pre_fork at 0x7ff4fd812bf8>
+  backlog: 2048
+  ciphers: TLSv1
+  post_fork: <function Postfork.post_fork at 0x7ff4fd812d90>
+  pidfile: None
+  max_requests_jitter: 0
+  limit_request_line: 4094
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  worker_abort: <function WorkerAbort.worker_abort at 0x7ff4fd8172f0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7ff4fd817a60>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7ff4fd817bf8>
+  tmp_upload_dir: None
+  forwarded_allow_ips: ['127.0.0.1']
+  syslog: False
+  threads: 1
+  pythonpath: None
+  ssl_version: 2
+  paste: None
+  config: None
+  statsd_prefix: 
+  post_request: <function PostRequest.post_request at 0x7ff4fd817730>
+  reload_engine: auto
+  workers: 3
+  worker_class: sync
+  graceful_timeout: 30
+  loglevel: debug
+  raw_env: []
+  initgroups: False
+  raw_paste_global_conf: []
+  certfile: None
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7ff4fd812f28>
+[2017-12-07 05:57:16 +0000] [27623] [INFO] Starting gunicorn 19.7.1
+[2017-12-07 05:57:16 +0000] [27623] [DEBUG] Arbiter booted
+[2017-12-07 05:57:16 +0000] [27623] [INFO] Listening at: http://0.0.0.0:8000 (27623)
+[2017-12-07 05:57:16 +0000] [27623] [INFO] Using worker: sync
+[2017-12-07 05:57:16 +0000] [27626] [INFO] Booting worker with pid: 27626
+[2017-12-07 05:57:16 +0000] [27626] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-07 05:57:16 +0000] [27626] [INFO] Worker exiting (pid: 27626)
+[2017-12-07 05:57:16 +0000] [27623] [INFO] Shutting down: Master
+[2017-12-07 05:57:16 +0000] [27623] [INFO] Reason: Worker failed to boot.
+[2017-12-07 06:00:09 +0000] [27767] [DEBUG] Current configuration:
+  user: 1000
+  worker_class: sync
+  on_starting: <function OnStarting.on_starting at 0x7fde6dbc2730>
+  syslog_prefix: None
+  syslog_facility: user
+  statsd_host: None
+  initgroups: False
+  limit_request_line: 4094
+  bind: ['0.0.0.0:8000']
+  logconfig: None
+  keyfile: None
+  do_handshake_on_connect: False
+  on_reload: <function OnReload.on_reload at 0x7fde6dbc28c8>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fde6dbc72f0>
+  accesslog: None
+  statsd_prefix: 
+  default_proc_name: testapp.wsgi:application
+  certfile: None
+  graceful_timeout: 30
+  chdir: /home/ubuntu/rockford/examples/myproject
+  worker_tmp_dir: None
+  group: 1000
+  when_ready: <function WhenReady.when_ready at 0x7fde6dbc2a60>
+  pre_fork: <function Prefork.pre_fork at 0x7fde6dbc2bf8>
+  post_fork: <function Postfork.post_fork at 0x7fde6dbc2d90>
+  pre_exec: <function PreExec.pre_exec at 0x7fde6dbc7488>
+  pre_request: <function PreRequest.pre_request at 0x7fde6dbc7620>
+  forwarded_allow_ips: ['127.0.0.1']
+  proxy_protocol: False
+  cert_reqs: 0
+  reload: False
+  ca_certs: None
+  sendfile: None
+  max_requests: 0
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  logger_class: gunicorn.glogging.Logger
+  syslog_addr: udp://localhost:514
+  child_exit: <function ChildExit.child_exit at 0x7fde6dbc78c8>
+  on_exit: <function OnExit.on_exit at 0x7fde6dbc7d90>
+  paste: None
+  proxy_allow_ips: ['127.0.0.1']
+  keepalive: 2
+  syslog: False
+  workers: 3
+  raw_paste_global_conf: []
+  timeout: 30
+  raw_env: []
+  worker_int: <function WorkerInt.worker_int at 0x7fde6dbc7158>
+  worker_connections: 1000
+  enable_stdio_inheritance: False
+  tmp_upload_dir: None
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  secure_scheme_headers: {'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTOCOL': 'ssl'}
+  config: None
+  backlog: 2048
+  max_requests_jitter: 0
+  reload_engine: auto
+  loglevel: debug
+  capture_output: False
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fde6dbc2f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fde6dbc7bf8>
+  check_config: False
+  threads: 1
+  pidfile: None
+  worker_exit: <function WorkerExit.worker_exit at 0x7fde6dbc7a60>
+  preload_app: False
+  limit_request_fields: 100
+  daemon: False
+  post_request: <function PostRequest.post_request at 0x7fde6dbc7730>
+  ssl_version: 2
+  suppress_ragged_eofs: True
+  ciphers: TLSv1
+  spew: False
+  umask: 0
+  limit_request_field_size: 8190
+  pythonpath: None
+  proc_name: None
+[2017-12-07 06:00:09 +0000] [27767] [INFO] Starting gunicorn 19.7.1
+[2017-12-07 06:00:09 +0000] [27767] [DEBUG] Arbiter booted
+[2017-12-07 06:00:09 +0000] [27767] [INFO] Listening at: http://0.0.0.0:8000 (27767)
+[2017-12-07 06:00:09 +0000] [27767] [INFO] Using worker: sync
+[2017-12-07 06:00:09 +0000] [27770] [INFO] Booting worker with pid: 27770
+[2017-12-07 06:00:09 +0000] [27770] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-07 06:00:09 +0000] [27770] [INFO] Worker exiting (pid: 27770)
+[2017-12-07 06:00:09 +0000] [27767] [INFO] Shutting down: Master
+[2017-12-07 06:00:09 +0000] [27767] [INFO] Reason: Worker failed to boot.
+[2017-12-07 06:06:58 +0000] [27929] [DEBUG] Current configuration:
+  chdir: /home/ubuntu/rockford/examples/myproject
+  ca_certs: None
+  on_starting: <function OnStarting.on_starting at 0x7f89bafbd730>
+  worker_connections: 1000
+  graceful_timeout: 30
+  loglevel: debug
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f89bafc2bf8>
+  keyfile: None
+  logconfig: None
+  sendfile: None
+  limit_request_fields: 100
+  tmp_upload_dir: None
+  pythonpath: None
+  proxy_protocol: False
+  logger_class: gunicorn.glogging.Logger
+  syslog_facility: user
+  when_ready: <function WhenReady.when_ready at 0x7f89bafbda60>
+  pre_fork: <function Prefork.pre_fork at 0x7f89bafbdbf8>
+  preload_app: False
+  spew: False
+  timeout: 30
+  config: None
+  paste: None
+  suppress_ragged_eofs: True
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  on_reload: <function OnReload.on_reload at 0x7f89bafbd8c8>
+  daemon: False
+  pidfile: None
+  raw_paste_global_conf: []
+  syslog_addr: udp://localhost:514
+  proxy_allow_ips: ['127.0.0.1']
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f89bafbdf28>
+  forwarded_allow_ips: ['127.0.0.1']
+  proc_name: None
+  statsd_prefix: 
+  workers: 3
+  limit_request_line: 4094
+  on_exit: <function OnExit.on_exit at 0x7f89bafc2d90>
+  initgroups: False
+  statsd_host: None
+  keepalive: 2
+  umask: 0
+  child_exit: <function ChildExit.child_exit at 0x7f89bafc28c8>
+  reload: False
+  raw_env: []
+  certfile: None
+  enable_stdio_inheritance: False
+  max_requests_jitter: 0
+  post_fork: <function Postfork.post_fork at 0x7f89bafbdd90>
+  worker_tmp_dir: None
+  pre_exec: <function PreExec.pre_exec at 0x7f89bafc2488>
+  threads: 1
+  do_handshake_on_connect: False
+  default_proc_name: testapp.wsgi:application
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https'}
+  bind: ['0.0.0.0:8000']
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f89bafc22f0>
+  pre_request: <function PreRequest.pre_request at 0x7f89bafc2620>
+  post_request: <function PostRequest.post_request at 0x7f89bafc2730>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f89bafc2a60>
+  accesslog: None
+  user: 1000
+  syslog: False
+  backlog: 2048
+  worker_class: sync
+  max_requests: 0
+  limit_request_field_size: 8190
+  check_config: False
+  syslog_prefix: None
+  ssl_version: 2
+  cert_reqs: 0
+  ciphers: TLSv1
+  group: 1000
+  worker_int: <function WorkerInt.worker_int at 0x7f89bafc2158>
+  reload_engine: auto
+  capture_output: False
+[2017-12-07 06:06:58 +0000] [27929] [INFO] Starting gunicorn 19.7.1
+[2017-12-07 06:06:58 +0000] [27929] [DEBUG] Arbiter booted
+[2017-12-07 06:06:58 +0000] [27929] [INFO] Listening at: http://0.0.0.0:8000 (27929)
+[2017-12-07 06:06:58 +0000] [27929] [INFO] Using worker: sync
+[2017-12-07 06:06:58 +0000] [27932] [INFO] Booting worker with pid: 27932
+[2017-12-07 06:06:58 +0000] [27932] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-07 06:06:58 +0000] [27932] [INFO] Worker exiting (pid: 27932)
+[2017-12-07 06:06:58 +0000] [27933] [INFO] Booting worker with pid: 27933
+[2017-12-07 06:06:58 +0000] [27929] [DEBUG] 3 workers
+[2017-12-07 06:06:58 +0000] [27934] [INFO] Booting worker with pid: 27934
+[2017-12-07 06:06:58 +0000] [27933] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-07 06:06:58 +0000] [27933] [INFO] Worker exiting (pid: 27933)
+[2017-12-07 06:06:58 +0000] [27934] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-07 06:06:58 +0000] [27934] [INFO] Worker exiting (pid: 27934)
+[2017-12-07 06:06:58 +0000] [27929] [INFO] Shutting down: Master
+[2017-12-07 06:06:58 +0000] [27929] [INFO] Reason: Worker failed to boot.
+[2017-12-07 06:07:11 +0000] [27941] [DEBUG] Current configuration:
+  post_request: <function PostRequest.post_request at 0x7f587dfd7730>
+  proxy_allow_ips: ['127.0.0.1']
+  logconfig: None
+  initgroups: False
+  on_reload: <function OnReload.on_reload at 0x7f587dfd28c8>
+  do_handshake_on_connect: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  loglevel: debug
+  when_ready: <function WhenReady.when_ready at 0x7f587dfd2a60>
+  preload_app: False
+  ssl_version: 2
+  sendfile: None
+  worker_tmp_dir: None
+  group: 1000
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https'}
+  forwarded_allow_ips: ['127.0.0.1']
+  on_starting: <function OnStarting.on_starting at 0x7f587dfd2730>
+  post_fork: <function Postfork.post_fork at 0x7f587dfd2d90>
+  worker_int: <function WorkerInt.worker_int at 0x7f587dfd7158>
+  pre_request: <function PreRequest.pre_request at 0x7f587dfd7620>
+  threads: 1
+  max_requests_jitter: 0
+  accesslog: None
+  logger_class: gunicorn.glogging.Logger
+  syslog_facility: user
+  statsd_prefix: 
+  bind: ['0.0.0.0:8000']
+  ciphers: TLSv1
+  config: None
+  proxy_protocol: False
+  workers: 3
+  keyfile: None
+  proc_name: None
+  worker_class: sync
+  worker_connections: 1000
+  child_exit: <function ChildExit.child_exit at 0x7f587dfd78c8>
+  enable_stdio_inheritance: False
+  paste: None
+  timeout: 30
+  limit_request_field_size: 8190
+  capture_output: False
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f587dfd2f28>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f587dfd7bf8>
+  daemon: False
+  umask: 0
+  raw_paste_global_conf: []
+  default_proc_name: testapp.wsgi:application
+  certfile: None
+  ca_certs: None
+  reload_engine: auto
+  cert_reqs: 0
+  reload: False
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  syslog: False
+  syslog_prefix: None
+  user: 1000
+  max_requests: 0
+  graceful_timeout: 30
+  statsd_host: None
+  limit_request_line: 4094
+  pythonpath: None
+  backlog: 2048
+  spew: False
+  limit_request_fields: 100
+  pre_fork: <function Prefork.pre_fork at 0x7f587dfd2bf8>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f587dfd72f0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f587dfd7a60>
+  raw_env: []
+  tmp_upload_dir: None
+  keepalive: 2
+  suppress_ragged_eofs: True
+  pre_exec: <function PreExec.pre_exec at 0x7f587dfd7488>
+  check_config: False
+  chdir: /home/ubuntu/rockford/examples/myproject
+  pidfile: None
+  syslog_addr: udp://localhost:514
+  on_exit: <function OnExit.on_exit at 0x7f587dfd7d90>
+[2017-12-07 06:07:11 +0000] [27941] [INFO] Starting gunicorn 19.7.1
+[2017-12-07 06:07:11 +0000] [27941] [DEBUG] Arbiter booted
+[2017-12-07 06:07:11 +0000] [27941] [INFO] Listening at: http://0.0.0.0:8000 (27941)
+[2017-12-07 06:07:11 +0000] [27941] [INFO] Using worker: sync
+[2017-12-07 06:07:11 +0000] [27946] [INFO] Booting worker with pid: 27946
+[2017-12-07 06:07:11 +0000] [27946] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-07 06:07:11 +0000] [27946] [INFO] Worker exiting (pid: 27946)
+[2017-12-07 06:07:11 +0000] [27941] [INFO] Shutting down: Master
+[2017-12-07 06:07:11 +0000] [27941] [INFO] Reason: Worker failed to boot.
+[2017-12-07 06:07:25 +0000] [28032] [DEBUG] Current configuration:
+  bind: ['0.0.0.0:8000']
+  max_requests: 0
+  ca_certs: None
+  on_starting: <function OnStarting.on_starting at 0x7f4285aa4730>
+  sendfile: None
+  raw_env: []
+  umask: 0
+  tmp_upload_dir: None
+  proxy_protocol: False
+  ciphers: TLSv1
+  statsd_prefix: 
+  proc_name: None
+  proxy_allow_ips: ['127.0.0.1']
+  raw_paste_global_conf: []
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f4285aa4f28>
+  worker_int: <function WorkerInt.worker_int at 0x7f4285aa9158>
+  workers: 3
+  loglevel: debug
+  capture_output: False
+  syslog_addr: udp://localhost:514
+  enable_stdio_inheritance: False
+  threads: 1
+  limit_request_fields: 100
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f4285aa92f0>
+  worker_class: sync
+  daemon: False
+  pidfile: None
+  group: 1000
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-SSL': 'on', 'X-FORWARDED-PROTO': 'https'}
+  config: None
+  worker_connections: 1000
+  max_requests_jitter: 0
+  worker_exit: <function WorkerExit.worker_exit at 0x7f4285aa9a60>
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  syslog: False
+  syslog_facility: user
+  reload: False
+  post_request: <function PostRequest.post_request at 0x7f4285aa9730>
+  do_handshake_on_connect: False
+  default_proc_name: testapp.wsgi:application
+  post_fork: <function Postfork.post_fork at 0x7f4285aa4d90>
+  cert_reqs: 0
+  suppress_ragged_eofs: True
+  logger_class: gunicorn.glogging.Logger
+  statsd_host: None
+  when_ready: <function WhenReady.when_ready at 0x7f4285aa4a60>
+  pre_fork: <function Prefork.pre_fork at 0x7f4285aa4bf8>
+  graceful_timeout: 30
+  user: 1000
+  certfile: None
+  pre_request: <function PreRequest.pre_request at 0x7f4285aa9620>
+  logconfig: None
+  limit_request_line: 4094
+  limit_request_field_size: 8190
+  pythonpath: None
+  syslog_prefix: None
+  keyfile: None
+  pre_exec: <function PreExec.pre_exec at 0x7f4285aa9488>
+  accesslog: None
+  child_exit: <function ChildExit.child_exit at 0x7f4285aa98c8>
+  paste: None
+  keepalive: 2
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f4285aa9bf8>
+  reload_engine: auto
+  backlog: 2048
+  spew: False
+  worker_tmp_dir: None
+  timeout: 30
+  ssl_version: 2
+  errorlog: /home/ubuntu/rockford/examples/myproject/gunicorn.log
+  check_config: False
+  on_exit: <function OnExit.on_exit at 0x7f4285aa9d90>
+  preload_app: False
+  initgroups: False
+  on_reload: <function OnReload.on_reload at 0x7f4285aa48c8>
+  chdir: /home/ubuntu/rockford/examples/myproject
+  forwarded_allow_ips: ['127.0.0.1']
+[2017-12-07 06:07:25 +0000] [28032] [INFO] Starting gunicorn 19.7.1
+[2017-12-07 06:07:25 +0000] [28032] [DEBUG] Arbiter booted
+[2017-12-07 06:07:25 +0000] [28032] [INFO] Listening at: http://0.0.0.0:8000 (28032)
+[2017-12-07 06:07:25 +0000] [28032] [INFO] Using worker: sync
+[2017-12-07 06:07:25 +0000] [28035] [INFO] Booting worker with pid: 28035
+[2017-12-07 06:07:25 +0000] [28035] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/.virtualenvs/testapp/lib/python3.5/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+ImportError: No module named 'testapp'
+[2017-12-07 06:07:25 +0000] [28035] [INFO] Worker exiting (pid: 28035)
+[2017-12-07 06:07:25 +0000] [28032] [INFO] Shutting down: Master
+[2017-12-07 06:07:25 +0000] [28032] [INFO] Reason: Worker failed to boot.

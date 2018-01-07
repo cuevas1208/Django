@@ -1,0 +1,19 @@
+<h1>{{ "Welcom to smart blind!" }}</h1>
+<h2>{{ "Pick your smart blind!" }}</h2>
+
+<form action="" method="post">
+{% if latest_room_list %}
+    <ul>
+    {% for room in latest_room_list %}
+        <li><a href="/rockford_TBD/{{ room.id }}/">{{ room.question_text }}</a></li>
+    {% endfor %}
+        
+     <html><body><form action="/index/" method="GET"><input type="submit" value="Click"></form{{output}}</body></html>
+    <button id="myClickButton" type="button">Click</button>
+         
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+<input type="submit" value="Vote2" />
+</form>
